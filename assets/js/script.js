@@ -8,12 +8,12 @@ function getCoords(cityQuery) {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
-                    console.log(data.weather[0].description);
-                    console.log(data.main.temp);
-                    console.log(data.weather[0].icon);
-                    console.log(data.main.humidity);
-                    console.log(data.wind.speed);
+                    // console.log(data);
+                    // console.log(data.weather[0].description);
+                    // console.log(data.main.temp);
+                    // console.log(data.weather[0].icon);
+                    // console.log(data.main.humidity);
+                    // console.log(data.wind.speed);
                 })
             }
         })
@@ -36,9 +36,9 @@ function getProgrammingJoke() {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
-                    console.log(data.setup);
-                    console.log(data.delivery);
+                    // console.log(data);
+                    // console.log(data.setup);
+                    // console.log(data.delivery);
                 })
             }
         })
@@ -61,9 +61,9 @@ function getManJoke() {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
-                    console.log(data.setup);
-                    console.log(data.punchline);
+                    // console.log(data);
+                    // console.log(data.setup);
+                    // console.log(data.punchline);
                 })
             }
         })
@@ -86,15 +86,107 @@ function getDadJoke() {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
+                    // console.log(data);
                     var randomNumber = Math.floor(Math.random() * data.items.length);
-                    console.log(data.items[randomNumber].headline); 
-                    console.log(data.items[randomNumber].punchline); 
+                    // console.log(data.items[randomNumber].headline); 
+                    // console.log(data.items[randomNumber].punchline); 
                 })
             }
         })
 }
 
 getDadJoke();
+
+
+
+
+const blackCardOp = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
+		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
+	}
+};
+
+function getBlackCard() {
+    var blackCardUrl = 'https://cards-against-humanity.p.rapidapi.com/black';
+    fetch(blackCardUrl, blackCardOp)
+        .then(function(response) {
+            if(response.ok) {
+                response.json()
+                .then(function(data) {
+                    // console.log(data);
+                    // console.log(data.text)
+                    // console.log(data.setup);
+                    // console.log(data.punchline);
+                })
+            }
+        })
+}
+
+getBlackCard();
+
+
+
+const WhiteCardOp = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
+		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
+	}
+};
+
+
+
+function getWhiteCard() {
+    var whiteCardUrl = 'https://cards-against-humanity.p.rapidapi.com/white/3';
+    fetch(whiteCardUrl,WhiteCardOp )
+        .then(function(response) {
+            if(response.ok) {
+                response.json()
+                .then(function(data) {
+                    // console.log(data[0].text);
+                    // console.log(data[1].text);
+                    // console.log(data[2].text);
+                })
+            }
+        })
+}
+
+getWhiteCard();
+
+
+const wROp = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
+		'X-RapidAPI-Host': 'would-you-rather.p.rapidapi.com'
+	}
+};
+
+
+
+function getWCard () {
+    var wCardUrl = 'https://would-you-rather.p.rapidapi.com/wyr/random';
+    fetch(wCardUrl,wROp )
+        .then(function(response) {
+            if(response.ok) {
+                response.json()
+                .then(function(data) {
+                    console.log(data)
+                    console.log(data[0].question)
+                    // console.log(data[0].text);
+                    // console.log(data[1].text);
+                    // console.log(data[2].text);
+                })
+            }
+        })
+}
+
+getWCard();
+
+
+
+
 
 
