@@ -112,7 +112,38 @@ main {
     text-align: justify;
 }
 
+/* ---------------------------------------------------------- */
+/* <=== - WEATHER DASHBOARD - ===> */
+/* <--- - search bar - ----> */
+#city-input {
+    font-size: 50px;
+    padding-left: 20px;
+    width: 80%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: var(--martinique-shadow);
+}
 
+#city-input::placeholder {
+    opacity: 0.5;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    color: var(--rose-bud);
+}
+
+#search-btn {
+    width: 10%;
+    font-size: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: var(--martinique);
+    box-shadow: var(--Martinique-shadow);
+}
+
+#search-btn i {
+    font-size: 40px;
+    color: white;
+}
 
 
 

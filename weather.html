@@ -7,26 +7,51 @@
 
     <!-- tailwindcss style script -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/73525b73cb.js" crossorigin="anonymous"></script>
     <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
     <!-- local css -->
-
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title> Weather App </title>
 </head>
 <body>
-    <div class="head-container">
-        <header class="flex flex-col items-center p-5">
-            <h1> Weather Dashboard </h1>
-            <!-- button that returns back to homepage -->
-            <button id="home-btn" class="rounded-full p-2 animate-pulse cursor-pointer">
-                <h2> Virtual Party Mom </h2>
-            </button>
-        </header>
-    </div>
-    <script src="./assets/js/weather.js"></script>
+
+    <div class="wrap-container">
+        <div class="head-container">
+            <header class="flex flex-col items-center p-5">
+                <h1> Weather Dashboard </h1>
+                <!-- button that returns back to homepage -->
+                <button id="home-btn" class="rounded-full p-2 animate-pulse cursor-pointer">
+                    <h2> Virtual Party Mom </h2>
+                </button>
+            </header>
+            <!-- end of wrap-container -->
+        </div>
+
+        <main>
+            <!-- search bar  -->
+            <div id="search-container" class="">
+                  <form id="search-city-form">
+                    <div class="form-inline">
+                        <input id="city-input" class="" placeholder="search for a city . . .">
+                        <button id="search-btn" class="" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                  </form>
+            </div>
+
+            <!-- weather content -->
+            <div id="weather-container" class="">
+                <!-- weather content here -->
+            </div>
+        </main>
+
+    <!-- end of wrap-container -->
+    </div>    
+    
 </body>
 </html>
