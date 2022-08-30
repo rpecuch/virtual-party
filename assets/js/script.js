@@ -15,7 +15,7 @@ var jokeCard = document.querySelector('#joke-card');
 
 function goToJoke(event) {
     event.preventDefault();
-    location.assign('./card5.html');
+    location.assign('./jokegen.html');
     
 }
 
@@ -45,15 +45,11 @@ function goToWyr(event) {
 
 wyrCard.addEventListener('click', goToWyr);
 
-// will do later !
-// outside-card
+var outsideCard = document.querySelector('#outside-card');
 
-// var outsideCard = document.querySelector('#outside-card');
+function goToOutside(event) {
+    event.preventDefault();
+    location.assign('./listactivities.html');
+}
 
-// function goToOutside(event) {
-//     event.preventDefault();
-//     location.assign('./outside.html');
-//     console.log(goToWeather)
-// }
-
-// weatherCard.addEventListener('click', goToWeather);
+outsideCard.addEventListener('click', goToOutside);
