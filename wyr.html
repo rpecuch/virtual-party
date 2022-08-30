@@ -1,38 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- tailwindcss style script -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/73525b73cb.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- google fonts link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
     <!-- local css -->
 
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title> Would You Rather? </title>
-</head>
-<body>
-    <div class="head-container">
-        <header class="flex flex-col items-center p-5">
-            <h1> Would You Rather? </h1>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <title>Would You Rather?</title>
+  </head>
+  <body>
+    <div class="wrap-container">
+      <!-- HEADER + TITLE -->
+        <div class="head-container">
+            <header class="flex flex-col items-center p-5">
+            <h1>Would You Rather?</h1>
             <!-- button that returns back to homepage -->
             <button id="home-btn" class="rounded-full p-2 animate-pulse cursor-pointer">
-                <h2> Virtual Party Mom </h2>
+                <h2>Virtual Party Mom</h2>
             </button>
-        </header>
+            </header>
+            <!-- end of head-container -->
+        </div>
+
+        <div class="wyr-content-container">
+            <!-- pick a card -->
+            <div id="wyr-btn-container" class="flex justify-center p-40">
+                <!-- function: button should trigger modal card -->
+                <button id="wyr-btn" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                    <i class="fa-solid fa-dice animate-spin hover:animate-none"></i>
+                    <p class="wyr-btn-overlay absolute flex justify-center items-center">
+                        generate a card
+                    </p>
+                </button>
+            </div>
+
+            <!-- display a card - vertically centered modal -->
+            <div id="wyr-play-card" class="modal-dialog modal-dialog-centeredflex justify-center">
+                <!-- edit to fit the components of the card = delete what isn't needed -->
+                <div id="wyr-card" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content p-1">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <!-- wyr card api contet goes here -->
+                    <div id="wyr-content" class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        <!-- end of wyr-content-container -->
+        </div>
+      <!-- end of wrap-container -->
     </div>
 
-
-    <!-- pick a card -->
-    <!-- display a card -->
-    <!-- pick new card -->
-    
+    <!-- bootstrap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- local javascript -->
     <script src="./assets/js/wyr.js"></script>
-</body>
-</html> 
+  </body>
+</html>

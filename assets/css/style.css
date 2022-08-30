@@ -146,11 +146,12 @@ main {
 }
 
 /* ---------------------------------------------------------- */
-/* <=== - JOKE GENERATOR- ===> */
+/* <=== - JOKE GENERATOR - ===> */
 /* <--- - search bar - ----> */
-#joke-label {
 
-}
+/* #joke-label {
+
+} */
 
 #joke-input {
     font-family: 'Josefin Sans', sans-serif;
@@ -188,5 +189,40 @@ main {
 }
 
 #joke-gen-btn:hover .j-btn-overlay {
+    opacity: 1;
+}
+
+/* ---------------------------------------------------------- */
+/* <=== - WOULD YOU RATHER? - ===> */
+/* <--- - wyr generate button - ----> */
+
+
+#wyr-btn {
+    width: 50%;
+    height: 120px;
+    font-size: 50px;
+    border-radius: 15px;
+    background-color: var(--golden-bell);
+    color: var(--manhattan);
+    box-shadow: var(--martinique-shadow);
+}
+
+#wyr-btn i {
+    font-size: 50px;
+}
+
+#wyr-btn .wyr-btn-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    border-radius: 15px;
+    background-color: var(--cape-honey);
+    color: var(--martinique);
+}
+
+#wyr-btn:hover .wyr-btn-overlay {
     opacity: 1;
 }
