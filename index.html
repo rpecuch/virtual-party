@@ -5,26 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- tailwind style info -->
+    <!-- tailwindcss style script -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <style type="text/tailwindcss">
-        tailwind.config = {
-            theme: {
-                colors: {
-                    'blue-bayoux': '#535d80',
-                    'cape-honey': '#fee1b3',
-                    'manhattan': '#f5ad97',
-                    'golden-bell': '#e68312',
-                }
-            }
-        }
-    </style> -->
 
     <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
 
+    <!-- local css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Virtual Party Mom</title>
 </head>
@@ -33,59 +22,109 @@
 
         <!-- HEADER + TITLE CONTENT -->
         <div class="head-container">
-            <header class="flex items-baseline justify-center">
+            <header class="flex items-baseline justify-center p-5">
                 <h1> Virtual Party Mom </h1>
             </header>
         </div>
 
         <!-- body -->
         <main>
-            <div class="grid grid-cols-3 gap-5">
+            <div id="content-container" class="flex flex-wrap justify-evenly">
                 <!-- weather card -->
-                <div id="weather-card" class="item-cards">
-                    <div class="card-img">
-                        <img src="./assets/images/placeholder imgs/addphoto.png">
+                <div id="weather-card" class="card-container relative flex content-center m-1 my-5 w-2/5 h-auto rounded-3xl animate-pulse hover:animate-none cursor-pointer">
+                    <div id="img-wrap" class="image object-contain">
+                        <img src="https://cdn.dribbble.com/users/576099/screenshots/3325183/scope_placeholder.jpg?compress=1&resize=800x600&vertical=top">
+                    <div id="card-description" class="overlay absolute rounded-3xl">
+                        <div class="text m-10 space-y-1  flex flex-col">
+                            <h2 class="py-5 "> Check the Weather </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-description">
-                        <h2> Check the Weather </h2>
-                        <hr>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
                     </div>
                 </div>
 
                 <!-- joke card -->
-                <div id="joke-card" class="item-cards">
-                    <div class="card-img">
-                        <img src="./assets/images/placeholder imgs/dribble_lost.png">
+                <div id="joke-card" class="card-container relative flex content-center m-1 my-5 w-2/5 h-auto rounded-3xl animate-pulse hover:animate-none cursor-pointer">
+                    <div id="img-wrap" class="image object-contain">
+                        <img src="https://cdn.dribbble.com/users/576099/screenshots/3325183/scope_placeholder.jpg?compress=1&resize=800x600&vertical=top">
+                    <div id="card-description" class="overlay absolute rounded-3xl">
+                        <div class="text m-10 space-y-1  flex flex-col">
+                            <h2 class="py-5 "> Randomize a Joke </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-description">
-                        <h2>Randomize a Joke </h2>
-                        <hr>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
                     </div>
-
                 </div>
 
                 <!-- cards against humanity card -->
-                <div id="againsthumanity-card" class="item-cards">
-                    <div class="card-img">
-                        <img src="./assets/images/placeholder imgs/maintenance.png">
+                <div id="cah-card" class="card-container relative flex content-center m-1 my-5 w-2/5 h-auto rounded-3xl animate-pulse hover:animate-none cursor-pointer">
+                    <div id="img-wrap" class="image object-contain">
+                        <img src="https://cdn.dribbble.com/users/576099/screenshots/3325183/scope_placeholder.jpg?compress=1&resize=800x600&vertical=top">
+                    <div id="card-description" class="overlay absolute rounded-3xl">
+                        <div class="text m-10 space-y-1  flex flex-col">
+                            <h2 class="py-5 "> Play Cards Against Humanity </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-description">
-                        <h2>Play Cards Against Humanity </h2>
-                        <hr>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
+
+                <!-- would you rather card -->
+                <div id="wyr-card" class="card-container relative flex content-center m-1 my-5 w-2/5 h-auto rounded-3xl animate-pulse hover:animate-none cursor-pointer">
+                    <div id="img-wrap" class="image object-contain">
+                        <img src="https://cdn.dribbble.com/users/576099/screenshots/3325183/scope_placeholder.jpg?compress=1&resize=800x600&vertical=top">
+                    <div id="card-description" class="overlay absolute rounded-3xl">
+                        <div class="text m-10 space-y-1  flex flex-col">
+                            <h2 class="py-5 "> Play Would You Rather? </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- card #5 -->
+                <div id="weather-card" class="card-container relative flex content-center m-1 my-5 w-2/5 h-auto rounded-3xl animate-pulse hover:animate-none cursor-pointer">
+                    <div id="img-wrap" class="image object-contain">
+                        <img src="https://cdn.dribbble.com/users/576099/screenshots/3325183/scope_placeholder.jpg?compress=1&resize=800x600&vertical=top">
+                    <div id="card-description" class="overlay absolute rounded-3xl">
+                        <div class="text m-10 space-y-1  flex flex-col">
+                            <h2 class="py-5 "> Check the Weather </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- card #6 -->
+                <div id="weather-card" class="card-container relative flex content-center m-1 my-5 w-2/5 h-auto rounded-3xl animate-pulse hover:animate-none cursor-pointer">
+                    <div id="img-wrap" class="image ">
+                        <img src="https://cdn.dribbble.com/users/576099/screenshots/3325183/scope_placeholder.jpg?compress=1&resize=800x600&vertical=top">
+                    <div id="card-description" class="overlay absolute rounded-3xl">
+                        <div class="text m-10 space-y-1  flex flex-col">
+                            <h2 class="py-5 "> Check the Weather </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <!-- end of content-container -->
             </div>
         </main>
-
-
+        <!-- end of wrap-container -->
     </div>
+
+    <!-- scripts -->
 </body>
 </html>
