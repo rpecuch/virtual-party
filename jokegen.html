@@ -7,7 +7,8 @@
 
     <!-- tailwindcss style script -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/73525b73cb.js" crossorigin="anonymous"></script>
     <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +16,48 @@
     <!-- local css -->
 
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title> CARD #5 </title>
+    <title> Joke Generator </title>
 </head>
 <body>
-    <div class="head-container">
-        <header class="flex flex-col items-center p-5">
-            <h1> CARD #5 </h1>
-            <!-- button that returns back to homepage -->
-            <button id="home-btn" class="rounded-full p-2 animate-pulse cursor-pointer">
-                <h2> Virtual Party Mom </h2>
-            </button>
-        </header>
+    <div class="wrap-container">
 
-        <!-- 3 types of joke buttons or dropdown menu -->
-        <!-- joke ratings section -->
+        <!-- HEADER + TITLE CONTENT -->
+        <div class="head-container">
+            <header class="flex flex-col items-center p-5">
+                <h1> Joke Generator </h1>
+                <!-- button that returns back to homepage -->
+                <button id="home-btn" class="rounded-full p-2 animate-pulse cursor-pointer">
+                    <h2> Virtual Party Mom </h2>
+                </button>
+            </header>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- 3 types of joke buttons or dropdown menu -->
+            <div id="joke-gen-container" class="flex flex-col content-center">
+                <form id="joke-form" class="">
+                    <select id="joke-input" class="flex flex-row">
+                        <option value="choose-type"> choose a type of joke . . . </option>
+                        <option value="manatee"> Manatee </option>
+                        <option value="programming"> Programming </option>
+                        <option value="dad-jokes"> Dad Jokes </option>
+                    </select>
+                    <button id="joke-gen-btn" class="relative flex items-center cursor-pointer">
+                        <i class="fa-solid fa-face-grin-squint-tears"></i>
+                        <p class="j-btn-overlay absolute "> generate </p>
+                    </button>
+                </form>
+            <!-- end of joke-gen-container -->
+            </div>
+
+            <!-- display joke -->
+            <div id="joke-display"></div>
+            <!-- joke ratings section -->
+            <div id="joke-ratings"></div>
+        </main>
+
+    <!-- wrap-container ends -->
     </div>
-    
 </body>
 </html>

@@ -145,5 +145,48 @@ main {
     color: white;
 }
 
+/* ---------------------------------------------------------- */
+/* <=== - JOKE GENERATOR- ===> */
+/* <--- - search bar - ----> */
+#joke-label {
 
+}
 
+#joke-input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: var(--martinique-shadow);
+}
+
+#joke-gen-btn {
+    width: 10%;
+    font-size: 50px;
+    border-radius: 15px;
+    background-color: var(--martinique);
+    box-shadow: var(--Martinique-shadow);
+}
+
+#joke-gen-btn i {
+    font-size: 50px;
+    color: white;
+}
+
+#joke-gen-btn .j-btn-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    border-radius: 15px;
+    background-color: var(--martinique);
+    color: white;
+}
+
+#joke-gen-btn:hover .j-btn-overlay {
+    opacity: 1;
+}
