@@ -16,13 +16,23 @@ function getWCard () {
                 response.json()
                 .then(function(data) {
                     console.log(data)
-                    console.log(data[0].question)
-                    console.log(data[0].text);
-                    console.log(data[1].text);
-                    console.log(data[2].text);
+                    // console.log(data[0].question)
+                    // console.log(data[0].text);
+                    // console.log(data[1].text);
+                    // console.log(data[2].text);
                 })
             }
         })
 }
 
 getWCard();
+
+var backBtn = document.querySelector('#home-btn');
+
+function goHome(event) {
+    event.preventDefault();
+    location.assign('./index.html');
+    
+}
+
+backBtn.addEventListener('click', goHome);

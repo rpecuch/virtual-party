@@ -1,5 +1,6 @@
 var cityQuery = "cleveland";//replace this with input value
 
+
 //extract current weather data
 function getCoords(cityQuery) {
     var coordsUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityQuery + "&appid=69f30a43ab68091abf44ef0a8bf5b7d9&units=imperial"
@@ -20,3 +21,13 @@ function getCoords(cityQuery) {
 }
 
 getCoords(cityQuery);
+
+var backBtn = document.querySelector('#home-btn');
+
+function goHome(event) {
+    event.preventDefault();
+    location.assign('./index.html');
+    
+}
+
+backBtn.addEventListener('click', goHome);
