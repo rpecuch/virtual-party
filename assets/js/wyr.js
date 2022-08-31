@@ -25,7 +25,7 @@ function getWCard () {
         })
 }
 
-getWCard();
+// getWCard();
 
 var backBtn = document.querySelector('#home-btn');
 
