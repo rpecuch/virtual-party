@@ -1,55 +1,26 @@
-const blackCardOp = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
-		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
-	}
-};
+var judgeBtn = document.querySelector('#judge-btn');
+//may need to adjust id name
 
-function getBlackCard() {
-    var blackCardUrl = 'https://cards-against-humanity.p.rapidapi.com/black';
-    fetch(blackCardUrl, blackCardOp)
-        .then(function(response) {
-            if(response.ok) {
-                response.json()
-                .then(function(data) {
-                    console.log(data);
-                    console.log(data.text)
-                    console.log(data.setup);
-                    console.log(data.punchline);
-                })
-            }
-        })
+//may need to adjust file name
+function goJudge(event) {
+    event.preventDefault();
+    location.assign('./cah-judge.html');
+    
 }
 
-// getBlackCard();
+judgeBtn.addEventListener('click', goJudge);
 
-const WhiteCardOp = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
-		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
-	}
-};
+var playerBtn = document.querySelector('#player-btn');
+//may need to adjust id name
 
-
-
-function getWhiteCard() {
-    var whiteCardUrl = 'https://cards-against-humanity.p.rapidapi.com/white/3';
-    fetch(whiteCardUrl,WhiteCardOp )
-        .then(function(response) {
-            if(response.ok) {
-                response.json()
-                .then(function(data) {
-                    console.log(data[0].text);
-                    console.log(data[1].text);
-                    console.log(data[2].text);
-                })
-            }
-        })
+//may need to adjust file name
+function goPlayer(event) {
+    event.preventDefault();
+    location.assign('./cah-player.html');
+    
 }
 
-// getWhiteCard();
+playerBtn.addEventListener('click', goPlayer);
 
 var backBtn = document.querySelector('#home-btn');
 
