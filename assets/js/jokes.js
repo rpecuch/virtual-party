@@ -2,6 +2,8 @@ var inputEl = document.querySelector("#joke-input");
 // var jokeType = inputEl.value;
 var jokeFormEl = document.querySelector("#joke-form");
 var jokeContentEl = document.querySelector("#joke-display");
+var likedJokes = [];
+var jokeRatingContainer = document.querySelector('#joke-ratings');
 
 jokeFormEl.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -100,6 +102,10 @@ function getDadJoke() {
 
 var backBtn = document.querySelector('#home-btn');
 
+
+// Come back to bug that does not display second joke after hitting gen button again
+
+
 function displayJoke(setup, delivery) {
     var jokeContainer = document.createElement("div");
     jokeContainer.classList.add("card", "my-3", "p-3");
@@ -126,14 +132,60 @@ function displayJoke(setup, delivery) {
         jokeContentEl.style.display = "none";
     })
     likeIcon.addEventListener("click", function() {
-        // saveJoke(setup, delivery);
+        saveJoke(setup, delivery);
         jokeContentEl.style.display = "none";
     })
 }
 
-function saveJoke(setup, delivery) {
 
+// jokes are saved in local storage but need to refresh for them to appear
+
+
+function saveJoke(setup, delivery) {
+   console.log('hi')
+    let currentJoke = [ {
+        Que: setup ,
+        Aye: delivery
+    }
+    ]
+    let storedJokes = JSON.parse(localStorage.getItem("likedJokes"));
+    if (storedJokes !== null) {
+        storedJokes.push(currentJoke[0]);
+    }
+    else {
+        storedJokes = currentJoke;
+    }
+    localStorage.setItem("likedJokes", JSON.stringify(storedJokes));
 }
+
+
+function displayLikedJokes() {
+    // if (storedJokes === null) {
+    //     jokeRatingContainer.style.display = 'none'
+    // }
+    var headerSection = document.createElement('h2');
+    headerSection.textContent = 'Your favorite jokes:';
+    jokeRatingContainer.appendChild(headerSection)
+    jokeRatingContainer.style.border = '5px solid black'
+    jokeRatingContainer.style.marginTop = '2%'
+    jokeRatingContainer.style.padding = '1%'
+    let storedJokes = JSON.parse(localStorage.getItem("likedJokes"));
+    if (storedJokes === null) {
+        jokeRatingContainer.style.display = 'none'
+    }
+    if(storedJokes !== null) {
+        for(var i=0; i<storedJokes.length; i++) {
+            var pastJoke = storedJokes[i];
+            var displayP = document.createElement("li");
+            // displayScore.setAttribute("class","score");
+            displayP.textContent = pastJoke.Que + " " + pastJoke.Aye;
+            jokeRatingContainer.appendChild(displayP);
+        }
+    }
+}
+
+displayLikedJokes();
+// console.log()
 
 function goHome(event) {
     event.preventDefault();
