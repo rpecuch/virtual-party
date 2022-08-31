@@ -225,8 +225,6 @@ main {
 
 /* ---------------------------------------------------------- */
 /* <=== - CARDS AGAINST HUMANITY - ===> */
-/* - player or judge - */
-/* --- player button --- */
 #player-btn {
     width: 30%;
     height: 120px;
@@ -237,7 +235,6 @@ main {
     box-shadow: var(--martinique-shadow);
 }
 
-/* --- judge button --- */
 #judge-btn {
     width: 30%;
     height: 120px;
@@ -248,9 +245,8 @@ main {
     box-shadow: var(--martinique-shadow);
 }
 
-/* - player - */
-/* --- generate white cards --- */
-#wcard-btn {
+/* --- generate cards --- */
+#wcard-btn, #bcard-btn {
     width: 30%;
     height: 120px;
     font-size: 50px;
@@ -260,7 +256,7 @@ main {
     box-shadow: var(--martinique-shadow);
 }
 
-.wcard {
+.wcard, .bcard {
     border-width: 0.1px;
     border-color: var(--martinique);
     width: 350px;
@@ -274,11 +270,11 @@ main {
     height: 90%;
 }
 
-.wcard-x-btn {
+.wcard-x-btn, .bcard-x-btn {
     opacity: 0.4;
 }
 
-.wcard-x-btn:hover {
+.wcard-x-btn:hover, .bcard-x-btn:hover {
     opacity: 1;
 }
 
