@@ -18,7 +18,7 @@
 
     <!-- local css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title> Weather App </title>
+    <title> Cards Against Humanity - Player </title>
 </head>
 <body>
     <div class="wrap-container">
@@ -33,13 +33,128 @@
             </header>
         </div>
         
-        <!-- content -->
-        <div class="cah-content-container">
-        <!-- end of cah-content-container -->
-        </div>
+        <main>
+            <!-- content -->
+            <div class="cah-p-container">
+                <!-- generate player cards -->
+                <div id="" class="wcard-gen-container relative flex flex-row justify-center items-center rounded-full cursor-pointer">
+                    <!-- player button -->
+                    <button id="wcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                        <i class=""></i>
+                        <p class="wcard-btn-overlay absolute flex justify-center items-center">
+                            generate player cards
+                        </p>
+                    </button>
+                    <!-- new game button -->
+                    <button id="wcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                        <i class=""></i>
+                        <p class="wcard-btn-overlay absolute flex justify-center items-center">
+                            new game
+                        </p>
+                    </button>
+                </div>
+
+                <!-- white cards grid -->
+                <div class="wcard-set-container flex flex-wrap justify-evenly">
+                    <!-- card #1 -->
+                    <div id="wcard-1" class="wcard flex content-center rounded-3xl cursor-pointer">
+                        <div class="wcard-content rounded-3xl">
+                            <div id="wcard-text-content" class="flex flex-col p-5">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- x button -->
+                            <div class="wcard-x-btn flex justify-center">
+                                <button id="wcard-close-btn" type="button" class="close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        <!-- end wcard-content -->
+                        </div>
+                    </div>
+
+                    <!-- card #2 -->
+                    <div id="wcard-2" class="wcard flex content-center rounded-3xl cursor-pointer">
+                        <div class="wcard-content rounded-3xl">
+                            <div id="wcard-text-content" class="flex flex-col p-5">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- x button -->
+                            <div class="wcard-x-btn flex justify-center">
+                                <button id="wcard-close-btn" type="button" class="close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        <!-- end wcard-content -->
+                        </div>
+                    </div>
+
+                    <!-- card #3 -->
+                    <div id="wcard-3" class="wcard flex content-center rounded-3xl cursor-pointer">
+                        <div class="wcard-content rounded-3xl">
+                            <div id="wcard-text-content" class="flex flex-col p-5">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- x button -->
+                            <div class="wcard-x-btn flex justify-center">
+                                <button id="wcard-close-btn" type="button" class="close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        <!-- end wcard-content -->
+                        </div>
+                    </div>
+
+                    <!-- card #4 -->
+                    <div id="wcard-4" class="wcard flex content-center rounded-3xl cursor-pointer">
+                        <div class="wcard-content rounded-3xl">
+                            <div id="wcard-text-content" class="flex flex-col p-5">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- x button -->
+                            <div class="wcard-x-btn flex justify-center">
+                                <button id="wcard-close-btn" type="button" class="close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        <!-- end wcard-content -->
+                        </div>
+                    </div>
+
+                    <!-- card #5 -->
+                    <div id="wcard-1" class="wcard flex content-center rounded-3xl cursor-pointer">
+                        <div class="wcard-content rounded-3xl">
+                            <div id="wcard-text-content" class="flex flex-col p-5">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- x button -->
+                            <div class="wcard-x-btn flex justify-center">
+                                <button id="wcard-close-btn" type="button" class="close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        <!-- end wcard-content -->
+                        </div>
+                    </div>
+
+                <!-- end of wcard-set-container -->
+                </div>
+            <!-- end of cah-p-container -->
+            </div>
+        </main>
     <!-- end of wrap-container -->
-    </div>    
-    <script src="./assets/js/cah.js"></script>
-</body>
+    </div>
+    
+    <!-- local js script -->
+    <script src="./assets/js/cah-player.js"></script>
 </body>
 </html>
