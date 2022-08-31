@@ -1,22 +1,18 @@
 var judgeBtn = document.querySelector('#judge-btn');
-//may need to adjust id name
 
-//may need to adjust file name
 function goJudge(event) {
     event.preventDefault();
-    location.assign('./cah-judge.html');
+    location.assign('./cah_judge.html');
     
 }
 
 judgeBtn.addEventListener('click', goJudge);
 
 var playerBtn = document.querySelector('#player-btn');
-//may need to adjust id name
 
-//may need to adjust file name
 function goPlayer(event) {
     event.preventDefault();
-    location.assign('./cah-player.html');
+    location.assign('./cah_player.html');
     
 }
 
