@@ -35,7 +35,7 @@
         
         <main>
             <!-- content -->
-            <div class="cah-p-container flex flex-row justify-center">
+            <div class="cah-p-container flex flex-row">
                 <!-- left -->
                 <div class="left-side basis-1/4 flex flex-col items-center">
                     <!-- scoreboard -->
@@ -43,6 +43,9 @@
                         <div class="score-header">
                             <h2> Scoreboard </h2>
                         </div>
+
+                        <hr>
+
                         <form id="new-player-form">
                             <div class="flex">
                                 <input id="new-player-input" placeholder="add a new player">
@@ -51,22 +54,24 @@
                                 </button>
                             </div>
                         </form>
+
                         <hr>
-                        <ul id="player-list" class="">
-                            <li class="player flex flex-row gap-1">
-                                <div>
+
+                        <div id="player-list" class="">
+                            <div class="player flex">
+                                <div class="basis-2/4">
                                     <p>player</p>
                                 </div>
-                                <div>
+                                <div class="basis-1/4">
                                     <p> -- </p>
                                 </div>
-                                <div>
+                                <div class="basis-1/4">
                                     <button id="add-point-btn">
                                         <i class="fa-solid fa-trophy"></i>
                                     </button>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

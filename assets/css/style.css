@@ -271,11 +271,13 @@ main {
     height: 90%;
 }
 
-.wcard-x-btn, .bcard-x-btn {
+.wcard-x-btn, 
+.bcard-x-btn {
     opacity: 0.4;
 }
 
-.wcard-x-btn:hover, .bcard-x-btn:hover {
+.wcard-x-btn:hover, 
+.bcard-x-btn:hover {
     opacity: 1;
 }
 
@@ -284,14 +286,7 @@ main {
     color: white;
 }
 
-/* - judge containers - */
-/* .left-side {
-    width: 20%;
-}
-
-.right-side {
-    width: 70%;
-} */
+/* - scoreboard - */
 .scoreboard {
     width: 100%;
     min-height: 300px;
@@ -299,7 +294,25 @@ main {
     border-color: var(--martinique);
     padding: 10px;
 }
-/* - scoreboard - */
+
+.score-header {
+    margin: 10px;
+}
+
+.score-header h2 {
+    font-size: 25px;
+}
+
+.scoreboard hr {
+    display: block;
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 96%;
+    background-color: var(--martinique);
+    height: 1px;
+}
+
 #new-player-input {
     display: flex;
     align-items: center;
@@ -320,9 +333,23 @@ main {
 
 #add-player-btn {
     padding-left: 10px;
+    color: var(--martinique);
 }
 
+#add-point-btn {
+    color: var(--martinique);
+}
 
+#add-player-btn:hover, 
+#add-point-btn:hover {
+    color: var(--golden-bell);
+}
+
+#player-list li p,
+#player-list li button {
+    padding: 3px 0;
+    font-size: 20px;
+}
 /* ---------------------------------------------------------- */
 /* <=== - WOULD YOU RATHER? - ===> */
 /* - wyr generate button - */
