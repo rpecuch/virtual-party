@@ -1,4 +1,12 @@
-//link to html
+var newGameBtn = document.querySelector(".new-game-btn");
+
+function newGame(event) {
+    event.preventDefault();
+    console.log("hi");
+    location.assign('./cah.html');
+}
+
+newGameBtn.addEventListener('click', newGame);
 
 const WhiteCardOp = {
 	method: 'GET',
