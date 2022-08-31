@@ -35,46 +35,84 @@
         
         <main>
             <!-- content -->
-            <div class="cah-p-container">
-                <!-- generate player cards -->
-                <div id="" class="wcard-gen-container relative flex flex-row justify-center items-center rounded-full cursor-pointer">
-                    <!-- player button -->
-                    <button id="bcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
-                        <i class=""></i>
-                        <p class="bcard-btn-overlay absolute flex justify-center items-center">
-                            generate black card
-                        </p>
-                    </button>
-                    <!-- new game button -->
-                    <button id="wcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
-                        <i class=""></i>
-                        <p class="wcard-btn-overlay absolute flex justify-center items-center">
-                            new game
-                        </p>
-                    </button>
-                </div>
-
-                <!-- black card -->
-                <div class="bcard-set-container flex flex-wrap justify-evenly">
-                    <!-- card #1 -->
-                    <div id="bcard" class="bcard flex rounded-3xl cursor-pointer">
-                        <div class="wcard-content rounded-3xl">
-                            <div id="wcard-text-content" class="flex flex-col content-center p-5">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                            <!-- x button -->
-                            <div class="bcard-x-btn flex justify-center">
-                                <button id="wcard-close-btn" type="button" class="close">
-                                    <i class="fa-solid fa-xmark"></i>
+            <div class="cah-p-container flex flex-row justify-center">
+                <!-- left -->
+                <div class="left-side basis-1/4 flex flex-col items-center">
+                    <!-- scoreboard -->
+                    <div class="scoreboard flex flex-col items-center">
+                        <div class="score-header">
+                            <h2> Scoreboard </h2>
+                        </div>
+                        <form id="new-player-form">
+                            <div class="flex">
+                                <input id="new-player-input" placeholder="add a new player">
+                                <button id="add-player-btn" type="submit">
+                                    <i class="fa-solid fa-user-plus"></i>
                                 </button>
                             </div>
-                        <!-- end wcard-content -->
-                        </div>
+                        </form>
+                        <hr>
+                        <ul id="player-list" class="">
+                            <li class="player flex flex-row gap-1">
+                                <div>
+                                    <p>player</p>
+                                </div>
+                                <div>
+                                    <p> -- </p>
+                                </div>
+                                <div>
+                                    <button id="add-point-btn">
+                                        <i class="fa-solid fa-trophy"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                <!-- end of wcard-set-container -->
                 </div>
+
+                <!-- right -->
+                <div class="right-side basis-3/4">
+                    <!-- generate black card button + new game -->
+                    <div id="" class="wcard-gen-container relative flex flex-row justify-evenly items-center rounded-full cursor-pointer">
+                        <!-- player button -->
+                        <button id="bcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                            <i class=""></i>
+                            <p class="bcard-btn-overlay absolute flex justify-center items-center">
+                                generate black card
+                            </p>
+                        </button>
+                        <!-- new game button -->
+                        <button id="wcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                            <i class=""></i>
+                            <p class="wcard-btn-overlay absolute flex justify-center items-center">
+                                new game
+                            </p>
+                        </button>
+                    </div>
+
+                    <!-- black card -->
+                    <div class="bcard-set-container flex flex-wrap justify-evenly">
+                        <!-- card #1 -->
+                        <div id="bcard" class="bcard flex rounded-3xl cursor-pointer">
+                            <div class="wcard-content rounded-3xl">
+                                <div id="wcard-text-content" class="flex flex-col content-center p-5">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                                <!-- x button -->
+                                <div class="bcard-x-btn flex justify-center">
+                                    <button id="wcard-close-btn" type="button" class="close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                    
+                                </div>
+                            <!-- end wcard-content -->
+                            </div>
+                        </div>
+                    <!-- end of wcard-set-container -->
+                    </div>
+                </div> 
             <!-- end of cah-p-container -->
             </div>
         </main>

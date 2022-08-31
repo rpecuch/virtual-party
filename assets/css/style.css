@@ -225,6 +225,7 @@ main {
 
 /* ---------------------------------------------------------- */
 /* <=== - CARDS AGAINST HUMANITY - ===> */
+/* - role buttons - */
 #player-btn {
     width: 30%;
     height: 120px;
@@ -245,7 +246,7 @@ main {
     box-shadow: var(--martinique-shadow);
 }
 
-/* --- generate cards --- */
+/* - generate cards - */
 #wcard-btn, #bcard-btn {
     width: 30%;
     height: 120px;
@@ -278,6 +279,48 @@ main {
     opacity: 1;
 }
 
+.bcard {
+    background: black;
+    color: white;
+}
+
+/* - judge containers - */
+/* .left-side {
+    width: 20%;
+}
+
+.right-side {
+    width: 70%;
+} */
+.scoreboard {
+    width: 100%;
+    min-height: 300px;
+    border-width: 1px;
+    border-color: var(--martinique);
+    padding: 10px;
+}
+/* - scoreboard - */
+#new-player-input {
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    border-width: 0.1px;
+    border-color: var(--martinique);
+    padding-left: 10px;
+    width: 100%;
+}
+
+#new-player-input::placeholder {
+    opacity: 0.7;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    color: var(--martinique);
+}
+
+#add-player-btn {
+    padding-left: 10px;
+}
 
 
 /* ---------------------------------------------------------- */
