@@ -157,7 +157,6 @@ function saveJoke(setup, delivery) {
         storedJokes = currentJoke;
     }
     localStorage.setItem("likedJokes", JSON.stringify(storedJokes));
-    
 }
 
 
