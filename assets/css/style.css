@@ -115,20 +115,25 @@ main {
 /* ---------------------------------------------------------- */
 /* <=== - WEATHER DASHBOARD - ===> */
 /* - search bar - */
+
+
 #city-input {
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 50px;
     padding-left: 20px;
-    width: 80%;
+    width: 90%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: var(--martinique-shadow);
 }
 
 #city-input::placeholder {
-    opacity: 0.5;
+    opacity: 0.7;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 25px;
-    color: var(--rose-bud);
+    font-size: 20px;
+    color: var(--martinique);
 }
 
 #search-btn {
@@ -137,12 +142,28 @@ main {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: var(--martinique);
-    box-shadow: var(--Martinique-shadow);
+    box-shadow: var(--martinique-shadow);
+    overflow: none;
 }
 
 #search-btn i {
     font-size: 40px;
-    color: white;
+    color: var(--cape-honey);
+}
+
+/* - weather results container - */
+#weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 50px;
+}
+
+#weather-container .card {
+    color: var(--martinique);
+    box-shadow: var(--martinique-shadow);
 }
 
 /* ---------------------------------------------------------- */
@@ -157,21 +178,22 @@ main {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     padding: 20px;
-    width: 50%;
+    width: 60%;
     border-radius: 15px;
     box-shadow: var(--martinique-shadow);
 }
 
 #joke-gen-btn {
-    width: 10%;
+    width: 50%;
     font-size: 50px;
     border-radius: 15px;
     background-color: var(--martinique);
-    box-shadow: var(--Martinique-shadow);
+    box-shadow: var(--martinique-shadow);
 }
 
 #joke-gen-btn i {
-    font-size: 50px;
+    padding: 10px;
+    font-size: 30px;
     color: white;
 }
 
@@ -185,13 +207,28 @@ main {
     transition: .5s ease;
     border-radius: 15px;
     background-color: var(--martinique);
-    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--rose-bud);
 }
 
 #joke-gen-btn:hover .j-btn-overlay {
     opacity: 1;
 }
 
+#joke-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 50px;
+}
+
+#joke-display .card {
+    color: var(--martinique);
+    box-shadow: var(--martinique-shadow);
+
+}
 /* ---------------------------------------------------------- */
 /* <=== - WOULD YOU RATHER? - ===> */
 /* - wyr generate button - */
