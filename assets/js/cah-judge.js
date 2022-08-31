@@ -1,18 +1,16 @@
 //may need to adjust id names for both of these
-var pickCardBtn = document.querySelector("#pick-card");
-var newGameBtn = document.querySelector("#new-game");
-var formEl = document.querySelector("#form");
-var playerInput = document.querySelector("#player-input");
-//define variables for scoreboard container and ul element, again may need to adjust ids
-var scoreboard = document.querySelector("#scoreboard");
-var scoresList = document.createElement("ul");
-scoreboard.appendChild(scoresList);
+var pickCardBtn = document.querySelector("#bcard-btn");
+var newGameBtn = document.querySelector(".new-game-btn");
+var formEl = document.querySelector("#new-player-form");
+var playerInput = document.querySelector("#new-player-input");
+var scoreboard = document.querySelector("#display-scores");
+var scoresList = $('#player-list');
 var count = 1;
 
 const blackCardOp = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
+		"X-RapidAPI-Key": "19317016bamsha52be237f77e205p1d1869jsn28e96131bdde",
 		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
 	}
 };
@@ -42,37 +40,51 @@ function displayCard(cardText) {
 pickCardBtn.addEventListener("click", getBlackCard);
 
 function newGame(event) {
+    console.log('hi')
     event.preventDefault();
+    
     location.assign('./cah.html');
     
 }
 
 newGameBtn.addEventListener('click', newGame);
 
+var backBtn = document.querySelector('#home-btn');
+
+function goHome(event) {
+    event.preventDefault();
+    location.assign('./index.html');
+    
+}
+
+backBtn.addEventListener('click', goHome);
+
+// when enter to input clear search bar 
 function handleFormSubmit(event) {
     event.preventDefault();
     var winningPlayer = playerInput.value;
     displayScoreboard(winningPlayer);
+    // console.log(winningPlayer)
 }
 
 function displayScoreboard(winningPlayer) {
     var playerLi = document.createElement("li");
-    playerLi.textContent = winningPlayer + count;
-    var addBtn = document.createElement("icon");
-    addBtn.classList.add("fa-solid", "fa-plus");
-    scoresList.appendChild(playerLi, addBtn);
+    playerLi.innerHTML = winningPlayer + '; ' + count + ' Point' + ' <i class="fa-solid fa-circle-plus"></i>';
+    scoresList.append(playerLi);
+    
 }
 
 formEl.addEventListener("submit", handleFormSubmit);
 
 function addPoint(event) {
     event.preventDefault();
-    var win = event.target;
-    var newScore = count++;
-    var parent = win.parentElement;
-    var firstChild = parent.children[0];
-    var playerName = firstChild.textContent;
-    firstChild.textContent = playerName + newScore;
+    console.log('hi')
+    // var win = event.target;
+    // var newScore = count++;
+    // var parent = win.parentElement;
+    // var firstChild = parent.children[0];
+    // var playerName = firstChild.textContent;
+    // firstChild.textContent = playerName + newScore;
 }
 
-scoresList.on("click", "fa-plus", addPoint);
+scoresList.on("click", ".fa-circle-plus", addPoint);

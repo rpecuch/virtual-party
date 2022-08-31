@@ -39,7 +39,7 @@
                 <!-- left -->
                 <div class="left-side basis-1/4 flex flex-col items-center">
                     <!-- scoreboard -->
-                    <div class="scoreboard flex flex-col items-center">
+                    <div id='display-scores' class="scoreboard flex flex-col items-center">
                         <div class="score-header">
                             <h2> Scoreboard </h2>
                         </div>
@@ -82,7 +82,7 @@
                             </p>
                         </button>
                         <!-- new game button -->
-                        <button id="wcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                        <button id="wcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer new-game-btn">
                             <i class=""></i>
                             <p class="wcard-btn-overlay absolute flex justify-center items-center">
                                 new game
@@ -96,8 +96,8 @@
                         <div id="bcard" class="bcard flex rounded-3xl cursor-pointer">
                             <div class="wcard-content rounded-3xl">
                                 <div id="wcard-text-content" class="flex flex-col content-center p-5">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    <p id="text-here">
+                                       
                                     </p>
                                 </div>
                                 <!-- x button -->
