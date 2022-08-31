@@ -114,7 +114,7 @@ main {
 
 /* ---------------------------------------------------------- */
 /* <=== - WEATHER DASHBOARD - ===> */
-/* <--- - search bar - ----> */
+/* - search bar - */
 #city-input {
     font-size: 50px;
     padding-left: 20px;
@@ -147,7 +147,7 @@ main {
 
 /* ---------------------------------------------------------- */
 /* <=== - JOKE GENERATOR - ===> */
-/* <--- - search bar - ----> */
+/* - search bar - */
 
 /* #joke-label {
 
@@ -194,9 +194,7 @@ main {
 
 /* ---------------------------------------------------------- */
 /* <=== - WOULD YOU RATHER? - ===> */
-/* <--- - wyr generate button - ----> */
-
-
+/* - wyr generate button - */
 #wyr-btn {
     width: 50%;
     height: 120px;
@@ -225,4 +223,30 @@ main {
 
 #wyr-btn:hover .wyr-btn-overlay {
     opacity: 1;
+}
+
+/* - wyr htp button - */
+#wyr-htp-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--blue-bayoux);
+    opacity: 0.6;
+}
+
+#wyr-htp-btn:hover {
+    color: var(--golden-bell);
+    opacity: 0.9;
+    text-decoration: underline;
+}
+
+/* - wyr modal - */
+#wyr-htp-modal .modal-dialog,
+#wyr-play-modal .modal-dialog {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 2;
+    box-shadow: var(--martinique-shadow);
+}
+
+#wyr-play-modal .close { /* moves the close button to the right */
+    text-align: right;
+    padding: 10px;
 }
