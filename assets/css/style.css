@@ -226,8 +226,7 @@ main {
 /* ---------------------------------------------------------- */
 /* <=== - CARDS AGAINST HUMANITY - ===> */
 /* - player or judge - */
-
-/* - player button - */
+/* --- player button --- */
 #player-btn {
     width: 30%;
     height: 120px;
@@ -238,7 +237,7 @@ main {
     box-shadow: var(--martinique-shadow);
 }
 
-/* - judge button - */
+/* --- judge button --- */
 #judge-btn {
     width: 30%;
     height: 120px;
@@ -248,6 +247,42 @@ main {
     color: var(--manhattan);
     box-shadow: var(--martinique-shadow);
 }
+
+/* - player - */
+/* --- generate white cards --- */
+#wcard-btn {
+    width: 30%;
+    height: 120px;
+    font-size: 50px;
+    border-radius: 15px;
+    background-color: var(--golden-bell);
+    color: var(--manhattan);
+    box-shadow: var(--martinique-shadow);
+}
+
+.wcard {
+    border-width: 0.1px;
+    border-color: var(--martinique);
+    width: 350px;
+    height: 500px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 50px;
+    box-shadow: var(--martinique-shadow);
+}
+
+#wcard-text-content {
+    height: 90%;
+}
+
+.wcard-x-btn {
+    opacity: 0.4;
+}
+
+.wcard-x-btn:hover {
+    opacity: 1;
+}
+
+
 
 /* ---------------------------------------------------------- */
 /* <=== - WOULD YOU RATHER? - ===> */
