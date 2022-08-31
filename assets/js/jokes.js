@@ -132,7 +132,7 @@ function displayJoke(setup, delivery) {
 }
 
 function saveJoke(setup, delivery) {
-    
+
 }
 
 function goHome(event) {
