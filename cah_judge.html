@@ -35,37 +35,33 @@
         
         <main>
             <!-- content -->
-            <div class="cah-p-container flex flex-row">
+            <div class="cah-p-container flex flex-wrap-reverse justify-evenly">
                 <!-- left -->
-                <div class="left-side basis-1/4 flex flex-col items-center">
+                <div class="left-side basis-1/5 flex flex-col items-center">
                     <!-- scoreboard -->
-                    <div id='display-scores' class="scoreboard flex flex-col items-center">
+                    <div id="display-scores" class="scoreboard flex flex-col items-center">
                         <div class="score-header">
-                            <h2> Scoreboard </h2>
+                            <h2> scoreboard </h2>
                         </div>
-
                         <hr>
-
                         <form id="new-player-form">
-                            <div class="flex">
+                            <div class="flex py-2">
                                 <input id="new-player-input" placeholder="add a new player">
                                 <button id="add-player-btn" type="submit">
                                     <i class="fa-solid fa-user-plus"></i>
                                 </button>
                             </div>
                         </form>
-
                         <hr>
-
                         <div id="player-list" class="">
-                            <div class="player flex">
-                                <div class="basis-2/4">
+                            <div class="flex justify-evenly px-3">
+                                <div class="basis-3/5">
                                     <p>player</p>
                                 </div>
-                                <div class="basis-1/4">
-                                    <p> -- </p>
+                                <div class="basis-1/5 flex justify-center">
+                                    <p> score </p>
                                 </div>
-                                <div class="basis-1/4">
+                                <div class="basis-1/5 flex justify-center">
                                     <button id="add-point-btn">
                                         <i class="fa-solid fa-trophy"></i>
                                     </button>
@@ -76,7 +72,7 @@
                 </div>
 
                 <!-- right -->
-                <div class="right-side basis-3/4">
+                <div class="right-side basis-3/5">
                     <!-- generate black card button + new game -->
                     <div id="" class="wcard-gen-container relative flex flex-row justify-evenly items-center rounded-full cursor-pointer">
                         <!-- player button -->
@@ -87,7 +83,7 @@
                             </p>
                         </button>
                         <!-- new game button -->
-                        <button id="wcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer new-game-btn">
+                        <button id="new-game-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer new-game-btn">
                             <i class=""></i>
                             <p class="wcard-btn-overlay absolute flex justify-center items-center">
                                 new game
@@ -105,17 +101,10 @@
                                        
                                     </p>
                                 </div>
-                                <!-- x button -->
-                                <div class="bcard-x-btn flex justify-center">
-                                    <button id="wcard-close-btn" type="button" class="close">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </button>
-                                    
-                                </div>
-                            <!-- end wcard-content -->
+                            <!-- end bcard-content -->
                             </div>
                         </div>
-                    <!-- end of wcard-set-container -->
+                    <!-- end of bcard-set-container -->
                     </div>
                 </div> 
             <!-- end of cah-p-container -->

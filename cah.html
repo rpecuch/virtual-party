@@ -18,10 +18,11 @@
 
     <!-- local css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title> Weather App </title>
+    <title> Cards Against Humanity </title>
 </head>
 <body>
     <div class="wrap-container">
+
         <!-- HEADER + TITLE -->
         <div class="head-container">
             <header class="flex flex-col items-center p-5">
@@ -33,33 +34,29 @@
             </header>
         </div>
         
-        <!-- 2 options - judge or player -->
-        <div class="cah-content-container">
-            <div id="" class="flex justify-center items-center">
-                <h2> Are You A Player or a Judge? </h2>
-            </div>
+        <main>
+            <!-- 2 options - judge or player -->
+            <div class="cah-content-container">
+                <!-- player or judge header -->
+                <div id="" class="flex justify-center items-center">
+                    <p>are you a judge or a player?</p>
+                </div>
 
-            
-            <div id="" class="cah-btn-container relative flex flex-row justify-center items-center rounded-full cursor-pointer">
-                <!-- player button -->
-                <button id="player-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
-                    <i class=""></i>
-                    <p class="player-btn-overlay absolute flex justify-center items-center">
-                        player
-                    </p>
-                </button>
-
-                <!-- judge button -->
-                <button id="judge-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
-                    <i class=""></i>
-                    <p class="judge-btn-overlay absolute flex justify-center items-center">
-                        judge
-                    </p>
-                </button>
-            <!-- end of btn-container -->
+                <!-- button container -->
+                <div class="cah-btn-container flex flex-row justify-evenly">
+                    <!-- player button -->
+                    <button id="player-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                        <img src="./assets/images/graphics/player.gif">
+                    </button>
+                    <!-- judge button -->
+                    <button id="judge-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                        <img src="./assets/images/graphics/judge-btn.gif">
+                    </button>
+                <!-- end of btn-container -->
+                </div>
+            <!-- end of cah-content-container -->
             </div>
-        <!-- end of cah-content-container -->
-        </div>
+        </main>
     <!-- end of wrap-container -->
     </div>    
     <script src="./assets/js/cah.js"></script>
