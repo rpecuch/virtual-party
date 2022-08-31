@@ -115,8 +115,6 @@ main {
 /* ---------------------------------------------------------- */
 /* <=== - WEATHER DASHBOARD - ===> */
 /* - search bar - */
-
-
 #city-input {
     display: flex;
     align-items: center;
@@ -169,11 +167,6 @@ main {
 /* ---------------------------------------------------------- */
 /* <=== - JOKE GENERATOR - ===> */
 /* - search bar - */
-
-/* #joke-label {
-
-} */
-
 #joke-input {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
@@ -229,6 +222,33 @@ main {
     box-shadow: var(--martinique-shadow);
 
 }
+
+/* ---------------------------------------------------------- */
+/* <=== - CARDS AGAINST HUMANITY - ===> */
+/* - player or judge - */
+
+/* - player button - */
+#player-btn {
+    width: 30%;
+    height: 120px;
+    font-size: 50px;
+    border-radius: 15px;
+    background-color: var(--golden-bell);
+    color: var(--manhattan);
+    box-shadow: var(--martinique-shadow);
+}
+
+/* - judge button - */
+#judge-btn {
+    width: 30%;
+    height: 120px;
+    font-size: 50px;
+    border-radius: 15px;
+    background-color: var(--golden-bell);
+    color: var(--manhattan);
+    box-shadow: var(--martinique-shadow);
+}
+
 /* ---------------------------------------------------------- */
 /* <=== - WOULD YOU RATHER? - ===> */
 /* - wyr generate button - */
