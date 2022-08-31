@@ -1,11 +1,11 @@
-//may need to adjust id names for both of these
+
 var pickCardBtn = document.querySelector("#bcard-btn");
 var newGameBtn = document.querySelector(".new-game-btn");
 var formEl = document.querySelector("#new-player-form");
 var playerInput = document.querySelector("#new-player-input");
 var scoreboard = document.querySelector("#display-scores");
 var scoresList = $('#player-list');
-var count = 1;
+var playerList = [];
 
 const blackCardOp = {
 	method: 'GET',
@@ -31,7 +31,6 @@ function getBlackCard() {
 }
 
 function displayCard(cardText) {
-    //may need to adjust id name
     var textDisplay = document.querySelector("#text-here");
     textDisplay.textContent = cardText;
     textDisplay.style.color = "white";
@@ -64,27 +63,27 @@ function handleFormSubmit(event) {
     event.preventDefault();
     var winningPlayer = playerInput.value;
     displayScoreboard(winningPlayer);
-    // console.log(winningPlayer)
 }
 
 function displayScoreboard(winningPlayer) {
     var playerLi = document.createElement("li");
-    playerLi.innerHTML = winningPlayer + '; ' + count + ' Point' + ' <i class="fa-solid fa-circle-plus"></i>';
-    scoresList.append(playerLi);
+    var initial = 1;
+    playerLi.textContent = winningPlayer + "  ";
+    var plusBtn = document.createElement("button");
+    plusBtn.innerHTML = "1 point   " + "<i class='fa-solid fa-circle-plus'></i>";
+    plusBtn.value = initial;
     
+    var icon = document.createElement("i");
+    plusBtn.append(icon);
+
+    playerLi.append(plusBtn);
+    scoresList.append(playerLi);
+    plusBtn.addEventListener("click", function() {
+        var count = initial + 1;
+        plusBtn.value = count;
+        plusBtn.innerHTML = count + " points   " + "<i class='fa-solid fa-circle-plus'></i>";
+        initial++;
+    }) 
 }
 
 formEl.addEventListener("submit", handleFormSubmit);
-
-function addPoint(event) {
-    event.preventDefault();
-    console.log('hi')
-    // var win = event.target;
-    // var newScore = count++;
-    // var parent = win.parentElement;
-    // var firstChild = parent.children[0];
-    // var playerName = firstChild.textContent;
-    // firstChild.textContent = playerName + newScore;
-}
-
-scoresList.on("click", ".fa-circle-plus", addPoint);
