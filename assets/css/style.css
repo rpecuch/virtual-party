@@ -15,17 +15,6 @@
     line-height: 1.5px;
 } 
 
-/* <== DEFAULT STYLING ==> */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
 /* <== TYPOGRAPHY ==> */
 h1 {
     font-size: 80px;
@@ -226,37 +215,33 @@ main {
 /* ---------------------------------------------------------- */
 /* <=== - CARDS AGAINST HUMANITY - ===> */
 /* - role buttons - */
-#player-btn {
-    width: 30%;
-    height: 120px;
-    font-size: 50px;
-    border-radius: 15px;
-    background-color: var(--golden-bell);
-    color: var(--manhattan);
-    box-shadow: var(--martinique-shadow);
+.cah-btn-container {
+    height: 60%;
+    padding: auto;
 }
 
-#judge-btn {
-    width: 30%;
+#player-btn,
+#judge-btn,
+#wcard-btn,
+#bcard-btn,
+#new-game-btn {
+    width: 350px;
     height: 120px;
-    font-size: 50px;
-    border-radius: 15px;
-    background-color: var(--golden-bell);
-    color: var(--manhattan);
+    border-radius: 15px; 
+}
+
+#player-btn img,
+#judge-btn img,
+#wcard-btn img,
+#bcard-btn img,
+#new-game-btn img {
+    border-radius: 24px;
+    min-width: 100%;
+    min-height: 100%;
     box-shadow: var(--martinique-shadow);
 }
 
 /* - generate cards - */
-#wcard-btn, #bcard-btn {
-    width: 30%;
-    height: 120px;
-    font-size: 50px;
-    border-radius: 15px;
-    background-color: var(--golden-bell);
-    color: var(--manhattan);
-    box-shadow: var(--martinique-shadow);
-}
-
 .wcard, .bcard {
     border-width: 0.1px;
     border-color: var(--martinique);
@@ -289,10 +274,13 @@ main {
 /* - scoreboard - */
 .scoreboard {
     width: 100%;
+    min-width: 300px;
     min-height: 300px;
+    padding: 10px;
     border-width: 1px;
     border-color: var(--martinique);
-    padding: 10px;
+    background-color: var(--cape-honey);
+    box-shadow: var(--martinique-shadow);
 }
 
 .score-header {
@@ -343,6 +331,10 @@ main {
 #add-player-btn:hover, 
 #add-point-btn:hover {
     color: var(--golden-bell);
+}
+
+#player-list {
+    width: 96%
 }
 
 #player-list li p,
