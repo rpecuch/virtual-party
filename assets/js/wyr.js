@@ -1,3 +1,6 @@
+var pickCard = document.querySelector("#wyr-btn");
+var cardContentEl = document.querySelector("#card-display-container");
+
 const wROp = {
 	method: 'GET',
 	headers: {
@@ -9,23 +12,32 @@ const wROp = {
 
 
 function getWCard () {
+    cardContentEl.innerHTML = "";
     var wCardUrl = 'https://would-you-rather.p.rapidapi.com/wyr/random';
     fetch(wCardUrl,wROp )
         .then(function(response) {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data)
-                    // console.log(data[0].question)
-                    // console.log(data[0].text);
-                    // console.log(data[1].text);
-                    // console.log(data[2].text);
+                    console.log(data);
+                    var wyrCard = data[0].question;
+                    displayCard(wyrCard);
                 })
             }
         })
 }
 
-// getWCard();
+pickCard.addEventListener("click", getWCard);
+
+function displayCard(wyrCard) {
+    console.log("display");
+    var cardContainer = document.createElement("div");
+    cardContainer.classList.add("card", "my-3", "p-3");
+    var cardText = document.createElement("p");
+    cardText.textContent = wyrCard;
+    cardContainer.appendChild(cardText);
+    cardContentEl.appendChild(cardContainer);
+}
 
 var backBtn = document.querySelector('#home-btn');
 
