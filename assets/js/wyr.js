@@ -1,7 +1,7 @@
 const wROp = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
+		'X-RapidAPI-Key': '19317016bamsha52be237f77e205p1d1869jsn28e96131bdde',
 		'X-RapidAPI-Host': 'would-you-rather.p.rapidapi.com'
 	}
 };
