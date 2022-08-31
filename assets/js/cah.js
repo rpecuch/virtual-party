@@ -22,7 +22,7 @@ function getBlackCard() {
         })
 }
 
-getBlackCard();
+// getBlackCard();
 
 const WhiteCardOp = {
 	method: 'GET',
@@ -49,7 +49,7 @@ function getWhiteCard() {
         })
 }
 
-getWhiteCard();
+// getWhiteCard();
 
 var backBtn = document.querySelector('#home-btn');
 
