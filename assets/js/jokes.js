@@ -139,6 +139,7 @@ function displayJoke(setup, delivery) {
 
 
 // jokes are saved in local storage but need to refresh for them to appear
+// also need refresh to clear local storage (li)
 
 
 function saveJoke(setup, delivery) {
@@ -182,6 +183,16 @@ function displayLikedJokes() {
             displayP.textContent = pastJoke.Que + " " + pastJoke.Aye;
             jokeRatingContainer.appendChild(displayP);
         }
+        var clearedJokes = document.createElement('button')
+        clearedJokes.textContent = 'Clear List';
+        jokeRatingContainer.appendChild(clearedJokes)
+        clearedJokes.style.backgroundColor = 'blue';
+        clearedJokes.style.color =  'white';
+        clearedJokes.style.padding = '5px';
+        clearedJokes.style.borderRadius = '10%';
+        clearedJokes.addEventListener('click', function(){
+            localStorage.clear();
+        }) 
     }
 }
 
