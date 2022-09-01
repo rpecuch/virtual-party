@@ -64,8 +64,9 @@ function displayWeather(cityQuery,description, temp, icon, humid, wind) {
     humidResult.textContent = "Humidity: " + humid + " %";
     resultsList.append(cityNameEl,dateEl, iconEl, descrResult, tempResult, windResult, humidResult);
     weatherContentEl.append(resultContainer);
-
+    inputEl.value = '';
 }
+
 
 var backBtn = document.querySelector('#home-btn');
 
