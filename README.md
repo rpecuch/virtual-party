@@ -64,11 +64,9 @@ To play Would You Rather?, visit the "Play Would You Rather?" section. Users wil
 
 ### Outdoor Activities
 
-To view a list of suggestions for outdoor group activities, visit the "Other Activities" section. To be directed back to the website homepage, click "Virtual Party Mom" at the top of the page.
+To view a list of suggestions for outdoor group activities, visit the "Other Activities" section. Hover over any image to view a description. To be directed back to the website homepage, click "Virtual Party Mom" at the top of the page.
 
-Add screenshot when we finish this page
-
-![list of outdoor activities for groups]()
+![list of outdoor activities for groups](./assets/images/readme/outdoor-page.png)
 
 ## Credits
 
