@@ -105,9 +105,6 @@ function getDadJoke() {
 
 var backBtn = document.querySelector('#home-btn');
 
-
-// TODO: Come back to bug that does not display second joke after hitting gen button again
-
 //displays joke that was retrieved from API
 function displayJoke(setup, delivery) {
     var jokeContainer = document.createElement("div");
@@ -133,18 +130,14 @@ function displayJoke(setup, delivery) {
     jokeContentEl.append(jokeContainer);
     //when user clicks dislike button
     dislikeIcon.addEventListener("click", function() {
-        jokeContentEl.style.display = "none";
+        location.reload();
     })
     //when user clicks like button
     likeIcon.addEventListener("click", function() {
         saveJoke(setup, delivery);
-        jokeContentEl.style.display = "none";
+        location.reload();
     })
 }
-
-
-// TODO: jokes are saved in local storage but need to refresh for them to appear
-// TODO: also need refresh to clear local storage (li)
 
 //saves liked jokes to local storage
 function saveJoke(setup, delivery) {
@@ -192,6 +185,7 @@ function displayLikedJokes() {
         clearedJokes.style.borderRadius = '10%';
         clearedJokes.addEventListener('click', function(){
             localStorage.clear();
+            location.reload();
         }) 
     }
 }
