@@ -23,8 +23,9 @@
     <title> Weather App </title>
 </head>
 <body>
-
     <div class="wrap-container">
+
+        <!-- HEADER + TITLE -->
         <div class="head-container">
             <header class="flex flex-col items-center p-5">
                 <h1> Weather Dashboard </h1>
@@ -37,21 +38,23 @@
         </div>
 
         <main>
-            <!-- search bar  -->
-            <div id="search-container" class="flex flex-col justify-between items-center">
-                  <form id="search-city-form">
-                    <div class="form-inline">
-                        <input id="city-input" placeholder="search for a city . . .">
-                        <button id="search-btn" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                  </form>
-            </div>
+            <div class="weather-content-container">
+                <!-- search bar  -->
+                <div id="search-container" class="flex flex-col justify-between items-center">
+                    <form id="search-city-form">
+                        <div class="form-inline">
+                            <input id="city-input" placeholder="search for a city . . .">
+                            <button id="search-btn" type="submit flex justify-center items-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-            <!-- weather content -->
-            <div id="weather-container" class="">
-                <!-- weather content here -->
+                <!-- weather content -->
+                <div id="weather-container" class="">
+                    <!-- weather content here -->
+                </div>
             </div>
         </main>
 
