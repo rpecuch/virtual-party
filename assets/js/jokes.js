@@ -1,10 +1,10 @@
 var inputEl = document.querySelector("#joke-input");
-// var jokeType = inputEl.value;
 var jokeFormEl = document.querySelector("#joke-form");
 var jokeContentEl = document.querySelector("#joke-display");
 var likedJokes = [];
 var jokeRatingContainer = document.querySelector('#joke-ratings');
 
+//collects input information from drop down menu of form
 jokeFormEl.addEventListener("submit", function(event) {
     event.preventDefault();
     var jokeType = inputEl.value;
@@ -29,6 +29,7 @@ const progOptions = {
 	}
 };
 
+//retrieves random programming joke from API
 function getProgrammingJoke() {
     var progJokeUrl = 'https://jokeapi-v2.p.rapidapi.com/joke/Programming?type=twopart&format=json&idRange=0-150&blacklistFlags=nsfw%2Cracist'
     fetch(progJokeUrl, progOptions)
@@ -55,6 +56,7 @@ const manateeOptions = {
 	}
 };
 
+//retrieves random joke from Manatee jokes API
 function getManJoke() {
     var manJokeUrl = 'https://manatee-jokes.p.rapidapi.com/manatees/random';
     fetch(manJokeUrl, manateeOptions)
@@ -81,6 +83,7 @@ const dadOptions = {
 	}
 };
 
+//retrieves random joke from dad jokes API
 function getDadJoke() {
     var dadJokeUrl = 'https://papajoke.p.rapidapi.com/api/jokes';
     fetch(dadJokeUrl, dadOptions)
@@ -103,9 +106,9 @@ function getDadJoke() {
 var backBtn = document.querySelector('#home-btn');
 
 
-// Come back to bug that does not display second joke after hitting gen button again
+// TODO: Come back to bug that does not display second joke after hitting gen button again
 
-
+//displays joke that was retrieved from API
 function displayJoke(setup, delivery) {
     var jokeContainer = document.createElement("div");
     jokeContainer.classList.add("card", "my-3", "p-3");
@@ -115,6 +118,7 @@ function displayJoke(setup, delivery) {
     setupEl.textContent = setup;
     var deliveryEl = document.createElement("p");
     deliveryEl.textContent = delivery;
+    //adds a like and dislike button to each card 
     var likeButton = document.createElement("button");
     var likeIcon = document.createElement("i");
     likeIcon.classList.add("fa-solid", "fa-thumbs-up", "fa-2xl")
@@ -127,10 +131,11 @@ function displayJoke(setup, delivery) {
     dislikeButton.append(dislikeIcon);
     jokeBody.append(setupEl, deliveryEl, likeButton, dislikeButton);
     jokeContentEl.append(jokeContainer);
-    //when user clicks like of dislike
+    //when user clicks dislike button
     dislikeIcon.addEventListener("click", function() {
         jokeContentEl.style.display = "none";
     })
+    //when user clicks like button
     likeIcon.addEventListener("click", function() {
         saveJoke(setup, delivery);
         jokeContentEl.style.display = "none";
@@ -138,10 +143,10 @@ function displayJoke(setup, delivery) {
 }
 
 
-// jokes are saved in local storage but need to refresh for them to appear
-// also need refresh to clear local storage (li)
+// TODO: jokes are saved in local storage but need to refresh for them to appear
+// TODO: also need refresh to clear local storage (li)
 
-
+//saves liked jokes to local storage
 function saveJoke(setup, delivery) {
    console.log('hi')
     let currentJoke = [ {
@@ -159,11 +164,8 @@ function saveJoke(setup, delivery) {
     localStorage.setItem("likedJokes", JSON.stringify(storedJokes));
 }
 
-
+//retrieves jokes liked by user from local storage and displays them
 function displayLikedJokes() {
-    // if (storedJokes === null) {
-    //     jokeRatingContainer.style.display = 'none'
-    // }
     var headerSection = document.createElement('h2');
     headerSection.textContent = 'Your favorite jokes:';
     jokeRatingContainer.appendChild(headerSection)
@@ -178,7 +180,6 @@ function displayLikedJokes() {
         for(var i=0; i<storedJokes.length; i++) {
             var pastJoke = storedJokes[i];
             var displayP = document.createElement("li");
-            // displayScore.setAttribute("class","score");
             displayP.textContent = pastJoke.Que + " " + pastJoke.Aye;
             jokeRatingContainer.appendChild(displayP);
         }
@@ -196,8 +197,8 @@ function displayLikedJokes() {
 }
 
 displayLikedJokes();
-// console.log()
 
+//redirects to website homepage
 function goHome(event) {
     event.preventDefault();
     location.assign('./index.html');

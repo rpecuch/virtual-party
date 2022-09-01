@@ -252,6 +252,11 @@ main {
     box-shadow: var(--martinique-shadow);
 }
 
+/* turns cards black to hide them when user clicks a card to play (CAH) */
+.wcard.toggled {
+    background: black;
+}
+
 #wcard-text-content {
     height: 90%;
 }
