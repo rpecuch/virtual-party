@@ -235,12 +235,39 @@ main {
 
 /* ---------------------------------------------------------- */
 /* <=== - CARDS AGAINST HUMANITY - ===> */
-/* - role buttons - */
+/* = styling - */
 .cah-btn-container {
     height: 60%;
     padding: auto;
 }
 
+.cah-header h2 {
+    font-size: 30px;
+    color: var(--blue-bayoux);
+    text-transform: uppercase;
+}
+
+.cah-head-container hr.top,
+.cah-p-container hr.top {
+    display: block;
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 96%;
+    background-color: var(--martinique);
+    height: 1px;
+}
+
+.cah-p-container hr.bottom {
+    display: block;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 96%;
+    background-color: var(--martinique);
+    height: 1px;
+}
+/* - role buttons - */
 #player-btn,
 #judge-btn,
 #wcard-btn,
@@ -275,11 +302,11 @@ main {
 
 /* turns cards black to hide them when user clicks a card to play (CAH) */
 .wcard.toggled {
-    background: black;
+    background: var(--martinique);
 }
 
 #wcard-text-content {
-    height: 90%;
+    height: 100%;
 }
 
 .wcard-x-btn, 
@@ -355,7 +382,7 @@ main {
 }
 
 #add-player-btn:hover, 
-#add-point-btn:hover {
+#player-list li button i:hover {
     color: var(--golden-bell);
 }
 
@@ -368,6 +395,23 @@ main {
     padding: 3px 0;
     font-size: 20px;
 }
+
+#player-list li {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 30px;
+    text-align: left;
+    font-size: 18px;
+    color: var(--blue-bayoux);
+    width: 100%;
+}
+
+#player-list li button {
+    text-align: right;
+    font-size: 16px;
+}
+
 /* ---------------------------------------------------------- */
 /* <=== - WOULD YOU RATHER? - ===> */
 /* - wyr generate button - */
@@ -405,29 +449,25 @@ main {
     opacity: 1;
 }
 
-/* - wyr htp button - */
-#wyr-htp-btn {
+/* - wyr-htp + cah-htp button - */
+#wyr-htp-btn,
+#cah-htp-btn {
     font-family: 'Josefin Sans', sans-serif;
     color: var(--blue-bayoux);
     opacity: 0.6;
 }
 
-#wyr-htp-btn:hover {
+#wyr-htp-btn:hover,
+#cah-htp-btn:hover {
     color: var(--golden-bell);
     opacity: 0.9;
     text-decoration: underline;
 }
 
-/* - wyr modal - */
+/* - wyr + cah modal - */
 #wyr-htp-modal .modal-dialog,
-#wyr-play-modal .modal-dialog {
+#cah-htp-modal .modal-dialog {
     font-family: 'Josefin Sans', sans-serif;
     line-height: 2;
     box-shadow: var(--martinique-shadow);
 }
-
-#wyr-play-modal .close { /* moves the close button to the right */
-    text-align: right;
-    padding: 10px;
-}
-

@@ -25,7 +25,7 @@ newGameBtn.addEventListener('click', newGame);
 const WhiteCardOp = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '19317016bamsha52be237f77e205p1d1869jsn28e96131bdde',
+		'X-RapidAPI-Key': 'dc01982f18mshe1b5fc27f0861e1p15f2dfjsnfb839f6c1e1f',
 		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
 	}
 };
