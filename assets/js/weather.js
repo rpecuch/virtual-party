@@ -3,7 +3,7 @@ var formEl = document.querySelector("#search-city-form");
 var weatherContentEl = document.querySelector("#weather-container");
 
 
-//extract current weather data
+//extract current weather data from API
 function getCoords(event) {
     event.preventDefault();
     var cityQuery = inputEl.value;
@@ -33,6 +33,7 @@ function getCoords(event) {
 
 formEl.addEventListener("submit", getCoords);
 
+//displays current weather conditions on page
 function displayWeather(description, temp, icon, humid, wind) {
     var resultContainer = document.createElement("div");
     resultContainer.classList.add("card", "my-3", "p-3");
@@ -59,8 +60,12 @@ function displayWeather(description, temp, icon, humid, wind) {
 
 }
 
+// TODO: back button instead of saying go home can say see options for indoor activities
+// TODO: have a button that directs to outside activities page
+
 var backBtn = document.querySelector('#home-btn');
 
+//redirects to website homepage
 function goHome(event) {
     event.preventDefault();
     location.assign('./index.html');

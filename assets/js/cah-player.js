@@ -2,7 +2,7 @@ var newGameBtn = document.querySelector(".new-game-btn");
 var genCard = document.querySelector('#gen-card');
 var cardContainer =$('.wcard-set-container');
 
-
+//redirects to website home page
 var backBtn = document.querySelector('#home-btn');
 
 function goHome(event) {
@@ -13,6 +13,7 @@ function goHome(event) {
 
 backBtn.addEventListener('click', goHome);
 
+//redirects to CAH home page
 function newGame(event) {
     event.preventDefault();
     console.log("hi");
@@ -24,13 +25,12 @@ newGameBtn.addEventListener('click', newGame);
 const WhiteCardOp = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '499c79d270mshbc1dbeea01486d2p1f1152jsn1f6f849e3ee4',
+		'X-RapidAPI-Key': '19317016bamsha52be237f77e205p1d1869jsn28e96131bdde',
 		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
 	}
 };
 
-
-
+//collects randomly selected set of white cards (player cards) from CAH API
 function getWhiteCard() {
     var whiteCardUrl = 'https://cards-against-humanity.p.rapidapi.com/white/5';
     fetch(whiteCardUrl,WhiteCardOp )
@@ -49,6 +49,7 @@ function getWhiteCard() {
         })
 }
 
+//displays text from randomly selected cards
 function displayCard(card1, card2, card3, card4, card5) {
     var cardText1 = document.querySelector('#card1-text');
     var cardText2 = document.querySelector('#card2-text');
@@ -62,33 +63,28 @@ function displayCard(card1, card2, card3, card4, card5) {
     cardText5.textContent = card5;
 }
 
-
-// come back to bug that will not change the style background cololr back to white;
+//allows user to click on the card they want to play and have the rest of their hand remain hidden
 function hidecards (event){
     event.preventDefault();
     var choosenCard = event.target;
-    // console.log(choosenCard);
     var allCards = document.querySelectorAll('.wcard')
-    // console.log(allCards)
     for ( var i = 0; i < allCards.length; i++) {
-        allCards[i].style.background = 'black';
+        allCards[i].classList.toggle('toggled');
     }
     choosenCard.style.background = 'white';
     var xIcon = document.createElement('i');
     xIcon.classList.add('fa-solid' ,'fa-circle-xmark', 'fa-2xl');
     choosenCard.append(xIcon);
-    xIcon.addEventListener('click' ,function(){
-        choosenCard.style.display = 'none';
-        for ( var i = 0; i < allCards.length; i++) {
-            allCards[i].style.background = 'white';
-           
-        }
-        // choosenCard.style.display = 'none';
-    })
+    xIcon.addEventListener("click", clearCard);
 }
 
-
-
+//TODO: this does not actually clear the card but it clears the text content
+// clears a card from hand so that it cannot be played again
+function clearCard(event) {
+    var clickedIcon = event.target;
+    var clearedCard = clickedIcon.parentNode;
+    clearedCard.style.display = 'none';
+}
 
 cardContainer.on('click','.wcard' , hidecards)
- genCard.addEventListener('click', getWhiteCard)
+genCard.addEventListener('click', getWhiteCard)

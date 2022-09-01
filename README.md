@@ -76,6 +76,18 @@ Include screenshot
 
 ## Credits
 
+### Collaborators
+
+Kevin Crespo: 
+- GitHub username: Kcrespo15
+- [GitHub profile](https://github.com/Kcrespo15)
+
+Clarence Go:
+- GitHub username: cmariego97
+- [GitHub profile](https://github.com/cmariego97)
+
+### Third-Party APIs
+
 The following client-side APIs were used to build this project: Bootstrap, Tailwind CSS, Moment.js, Google Fonts, and Font Awesome.
 
 The following server-side APIs were used to retrieve data for this project: OpenWeather One Call API, JokeAPI, manatee jokes API, papajoke API, Cards Against Humanity API, and Would You Rather API.

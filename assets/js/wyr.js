@@ -10,7 +10,7 @@ const wROp = {
 };
 
 
-
+//retrieves random WYR card from API
 function getWCard () {
     cardContentEl.innerHTML = "";
     var wCardUrl = 'https://would-you-rather.p.rapidapi.com/wyr/random';
@@ -29,6 +29,7 @@ function getWCard () {
 
 pickCard.addEventListener("click", getWCard);
 
+//displays WYR card 
 function displayCard(wyrCard) {
     console.log("display");
     var cardContainer = document.createElement("div");
@@ -41,6 +42,7 @@ function displayCard(wyrCard) {
 
 var backBtn = document.querySelector('#home-btn');
 
+//redirects to website homepage
 function goHome(event) {
     event.preventDefault();
     location.assign('./index.html');
