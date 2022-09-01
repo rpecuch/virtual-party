@@ -9,7 +9,7 @@ var playerList = [];
 const blackCardOp = {
 	method: 'GET',
 	headers: {
-		"X-RapidAPI-Key": "19317016bamsha52be237f77e205p1d1869jsn28e96131bdde",
+		'X-RapidAPI-Key': 'dc01982f18mshe1b5fc27f0861e1p15f2dfjsnfb839f6c1e1f',
 		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
 	}
 };
@@ -79,8 +79,8 @@ function displayScoreboard(winningPlayer) {
     var plusBtn = document.createElement("button");
     plusBtn.innerHTML ="1 point   " + "<i class='fa-solid fa-circle-plus'></i>";
     plusBtn.value = initial;
-    plusBtn.style.position = 'relative'
-    plusBtn.style.left = '85px';
+    // plusBtn.style.position = 'relative'
+    // plusBtn.style.left = '85px';
     var icon = document.createElement("i");
     plusBtn.append(icon);
     playerLi.append(plusBtn);

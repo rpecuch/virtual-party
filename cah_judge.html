@@ -8,6 +8,12 @@
     <!-- tailwindcss style script -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/73525b73cb.js" crossorigin="anonymous"></script>
 
@@ -73,16 +79,60 @@
 
                 <!-- right -->
                 <div class="right-side basis-3/5">
+                    <!-- player head -->
+                    <div class="cah-header flex justify-center items-center pb-5">
+                        <h2> you are the judge </h2>
+                    </div>
+                    <hr class="top">
                     <!-- generate black card button + new game -->
-                    <div id="" class="wcard-gen-container relative flex flex-row justify-evenly items-center rounded-full cursor-pointer">
+                    <div id="" class="wcard-gen-container relative flex flex-row justify-evenly items-center w-9/12 m-auto">
                         <!-- player button -->
-                        <button id="bcard-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer">
+                        <button id="bcard-btn" type="button" class="relative flex justify-center items-center p-3 rounded-full cursor-pointer">
                             <img src="./assets/images/graphics/get cards.gif">
                         </button>
                         <!-- new game button -->
-                        <button id="new-game-btn" type="button" class="relative flex justify-center items-center rounded-full cursor-pointer new-game-btn">
+                        <button id="new-game-btn" type="button" class="relative flex justify-center items-center p-3 rounded-full cursor-pointer new-game-btn">
                             <img src="./assets/images/graphics/new game.gif">
                         </button>
+                    </div>
+
+                    <!-- trigger modal - cah htp -->
+                    <div class="cah-htp-btn container flex justify-center pt-3">
+                        <a id="cah-htp-btn" type="button" class="p-2" data-toggle="modal" data-target="#cah-htp-modal"> 
+                            how to play
+                        </a>
+                    </div> 
+
+                    <!-- cah-htp-modal -->
+                    <div id="cah-htp-modal" class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- modal header -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">How to Play "Cards Against Humanity"</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-body">
+                                    <h5>As a Judge:</h5>
+                                1. Click on the button to generate a topic card <br>
+                                2. Decide who the which player picked the best card for that topic <br>
+                                3. Add player to scoreboard or add a point to their score <br>
+                                4. Pick another card <br>
+                                5. End the game when players are out of cards <br>
+                                <h5>As a Player:</h5>
+                                1. Click on the button to generate a hand of cards <br>
+                                2. Decide which of your cards best fits the topic card shown by the judge <br>
+                                3. Click on your chosen card and show the judge <br>
+                                4. Press the x icon and play another card for the next round <br>
+                                5. End the game when you are out of cards
+                                </div>
+                            <!-- end of modal-content  -->
+                            </div>
+                        <!-- end of modal dialog -->
+                        </div>
                     </div>
 
                     <!-- black card -->
@@ -106,6 +156,12 @@
         </main>
     <!-- end of wrap-container -->
     </div>  
+
+    <!-- bootstrap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> 
+    <!-- local js script -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
     <script src="./assets/js/cah-judge.js"></script>
 </body>
