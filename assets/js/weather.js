@@ -40,12 +40,14 @@ function displayWeather(cityQuery,description, temp, icon, humid, wind) {
     var resultBody = document.createElement("div");
     resultContainer.append(resultBody);
     var cityNameEl = document.createElement('h2')
+    //capitalizes first letter of city name
     var cityArray = cityQuery.split("");
     var capitalLetter = cityArray[0].toUpperCase();
     cityArray.shift();
     cityArray.unshift(capitalLetter);
     var searchResultText = cityArray.join("");
     cityNameEl.textContent = searchResultText;
+    //displays data points
     var dateEl = document.createElement("h3");
     var formatDate = moment().format("MMM Do YYYY");
     dateEl.textContent = formatDate;
@@ -64,6 +66,7 @@ function displayWeather(cityQuery,description, temp, icon, humid, wind) {
     humidResult.textContent = "Humidity: " + humid + " %";
     resultsList.append(cityNameEl,dateEl, iconEl, descrResult, tempResult, windResult, humidResult);
     weatherContentEl.append(resultContainer);
+    //clears search input field
     inputEl.value = '';
 }
 

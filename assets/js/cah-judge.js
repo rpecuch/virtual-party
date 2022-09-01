@@ -75,6 +75,7 @@ function displayScoreboard(winningPlayer) {
     var initial = 1;
     playerLi.textContent = winningPlayer + "  ";
     playerLi.style.listStyleType = 'none';
+    //creates a button next to each contestant name 
     var plusBtn = document.createElement("button");
     plusBtn.innerHTML ="1 point   " + "<i class='fa-solid fa-circle-plus'></i>";
     plusBtn.value = initial;
@@ -82,10 +83,10 @@ function displayScoreboard(winningPlayer) {
     plusBtn.style.left = '85px';
     var icon = document.createElement("i");
     plusBtn.append(icon);
-
     playerLi.append(plusBtn);
     scoresList.append(playerLi);
     playerInput.value = '';
+    //adds a point to contestant's score
     plusBtn.addEventListener("click", function() {
         var count = initial + 1;
         plusBtn.value = count;
