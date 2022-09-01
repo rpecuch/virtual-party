@@ -61,7 +61,7 @@ function goHome(event) {
 
 backBtn.addEventListener('click', goHome);
 
-// TODO: when enter to input clear search bar 
+
 // collects player name from form
 function handleFormSubmit(event) {
     event.preventDefault();
@@ -83,6 +83,7 @@ function displayScoreboard(winningPlayer) {
 
     playerLi.append(plusBtn);
     scoresList.append(playerLi);
+    playerInput.value = '';
     plusBtn.addEventListener("click", function() {
         var count = initial + 1;
         plusBtn.value = count;
