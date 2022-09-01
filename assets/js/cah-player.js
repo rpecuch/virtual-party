@@ -57,10 +57,15 @@ function displayCard(card1, card2, card3, card4, card5) {
     var cardText4 = document.querySelector('#card4-text');
     var cardText5 = document.querySelector('#card5-text');
     cardText1.textContent = card1;
+    cardText1.style.padding = '15%'
     cardText2.textContent = card2;
+    cardText2.style.padding = '15%'
     cardText3.textContent = card3;
+    cardText3.style.padding = '15%'
     cardText4.textContent = card4;
+    cardText4.style.padding = '15%'
     cardText5.textContent = card5;
+    cardText5.style.padding = '15%'
 }
 
 //allows user to click on the card they want to play and have the rest of their hand remain hidden
@@ -89,6 +94,7 @@ function clearCard(event) {
     clearedCardText.style.textAlign = "center";
     clearedCardText.style.padding = "15%";
     clearedCardText.style.fontSize = "40px";
+
 }
 
 cardContainer.on('click','.wcard' , hidecards)
