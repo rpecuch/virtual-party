@@ -75,15 +75,20 @@ function hidecards (event){
     var xIcon = document.createElement('i');
     xIcon.classList.add('fa-solid' ,'fa-circle-xmark', 'fa-2xl');
     choosenCard.append(xIcon);
+    //when x icon on card is clicked
     xIcon.addEventListener("click", clearCard);
 }
 
-//TODO: this does not actually clear the card but it clears the text content
 // clears a card from hand so that it cannot be played again
 function clearCard(event) {
     var clickedIcon = event.target;
     var clearedCard = clickedIcon.parentNode;
-    clearedCard.style.display = 'none';
+    clickedIcon.style.display = 'none';
+    var clearedCardText = clearedCard.children[0];
+    clearedCardText.textContent = "Cards Against Humanity.";
+    clearedCardText.style.textAlign = "center";
+    clearedCardText.style.padding = "15%";
+    clearedCardText.style.fontSize = "40px";
 }
 
 cardContainer.on('click','.wcard' , hidecards)
