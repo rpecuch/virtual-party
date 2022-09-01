@@ -4,7 +4,7 @@ var jokeContentEl = document.querySelector("#joke-display");
 var likedJokes = [];
 var jokeRatingContainer = document.querySelector('#joke-ratings');
 
-//collects input information from drop down menu of form
+//collects input information from drop down menu of form to decide which type of joke to retrieve
 jokeFormEl.addEventListener("submit", function(event) {
     event.preventDefault();
     var jokeType = inputEl.value;
@@ -179,6 +179,7 @@ function displayLikedJokes() {
             displayP.style.paddingLeft = '2%'
             jokeRatingContainer.appendChild(displayP);
         }
+        //creates a button to clear jokes from local storage
         var clearedJokes = document.createElement('button')
         clearedJokes.textContent = 'Clear List';
         jokeRatingContainer.appendChild(clearedJokes)
