@@ -25,7 +25,7 @@ function getCoords(event) {
                     var humid = data.main.humidity;
                     console.log(data.wind.speed);
                     var wind = data.wind.speed;
-                    displayWeather(description, temp, icon, humid, wind);
+                    displayWeather(cityQuery,description, temp, icon, humid, wind);
                 })
             }
         })
@@ -34,11 +34,18 @@ function getCoords(event) {
 formEl.addEventListener("submit", getCoords);
 
 //displays current weather conditions on page
-function displayWeather(description, temp, icon, humid, wind) {
+function displayWeather(cityQuery,description, temp, icon, humid, wind) {
     var resultContainer = document.createElement("div");
     resultContainer.classList.add("card", "my-3", "p-3");
     var resultBody = document.createElement("div");
     resultContainer.append(resultBody);
+    var cityNameEl = document.createElement('h2')
+    var cityArray = cityQuery.split("");
+    var capitalLetter = cityArray[0].toUpperCase();
+    cityArray.shift();
+    cityArray.unshift(capitalLetter);
+    var searchResultText = cityArray.join("");
+    cityNameEl.textContent = searchResultText;
     var dateEl = document.createElement("h3");
     var formatDate = moment().format("MMM Do YYYY");
     dateEl.textContent = formatDate;
@@ -55,13 +62,10 @@ function displayWeather(description, temp, icon, humid, wind) {
     windResult.textContent = "Wind: " + wind + " MPH";
     var humidResult = document.createElement("li");
     humidResult.textContent = "Humidity: " + humid + " %";
-    resultsList.append(dateEl, iconEl, descrResult, tempResult, windResult, humidResult);
+    resultsList.append(cityNameEl,dateEl, iconEl, descrResult, tempResult, windResult, humidResult);
     weatherContentEl.append(resultContainer);
 
 }
-
-// TODO: back button instead of saying go home can say see options for indoor activities
-// TODO: have a button that directs to outside activities page
 
 var backBtn = document.querySelector('#home-btn');
 
@@ -73,3 +77,15 @@ function goHome(event) {
 }
 
 backBtn.addEventListener('click', goHome);
+
+var outdoorBtn = document.querySelector('#outdoor-btn');
+
+//redirects to outdoor activities
+function goOutside(event) {
+    event.preventDefault();
+    location.assign('./listactivities.html');
+    
+}
+
+outdoorBtn.addEventListener('click', goOutside);
+
