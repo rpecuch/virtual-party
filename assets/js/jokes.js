@@ -161,8 +161,10 @@ function saveJoke(setup, delivery) {
 function displayLikedJokes() {
     var headerSection = document.createElement('h2');
     headerSection.textContent = 'Your favorite jokes:';
+    headerSection.style.paddingTop= '1%';
     jokeRatingContainer.appendChild(headerSection)
-    jokeRatingContainer.style.border = '5px solid black'
+    jokeRatingContainer.style.border = '2px solid black'
+    jokeRatingContainer.style.borderRadius = '10px'
     jokeRatingContainer.style.marginTop = '2%'
     jokeRatingContainer.style.padding = '1%'
     let storedJokes = JSON.parse(localStorage.getItem("likedJokes"));
@@ -174,15 +176,17 @@ function displayLikedJokes() {
             var pastJoke = storedJokes[i];
             var displayP = document.createElement("li");
             displayP.textContent = pastJoke.Que + " " + pastJoke.Aye;
+            displayP.style.paddingLeft = '2%'
             jokeRatingContainer.appendChild(displayP);
         }
         var clearedJokes = document.createElement('button')
         clearedJokes.textContent = 'Clear List';
         jokeRatingContainer.appendChild(clearedJokes)
-        clearedJokes.style.backgroundColor = 'blue';
+        clearedJokes.style.backgroundColor = ' #535d80';
         clearedJokes.style.color =  'white';
         clearedJokes.style.padding = '5px';
         clearedJokes.style.borderRadius = '10%';
+        clearedJokes.style.margin= '2%'
         clearedJokes.addEventListener('click', function(){
             localStorage.clear();
             location.reload();

@@ -74,10 +74,12 @@ function displayScoreboard(winningPlayer) {
     var playerLi = document.createElement("li");
     var initial = 1;
     playerLi.textContent = winningPlayer + "  ";
+    playerLi.style.listStyleType = 'none';
     var plusBtn = document.createElement("button");
-    plusBtn.innerHTML = "1 point   " + "<i class='fa-solid fa-circle-plus'></i>";
+    plusBtn.innerHTML ="1 point   " + "<i class='fa-solid fa-circle-plus'></i>";
     plusBtn.value = initial;
-    
+    plusBtn.style.position = 'relative'
+    plusBtn.style.left = '85px';
     var icon = document.createElement("i");
     plusBtn.append(icon);
 
