@@ -302,7 +302,7 @@ main {
 
 /* turns cards black to hide them when user clicks a card to play (CAH) */
 .wcard.toggled {
-    background: var(--martinique);
+    background: black;
 }
 
 #wcard-text-content {

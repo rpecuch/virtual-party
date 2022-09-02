@@ -92,4 +92,3 @@ function goOutside(event) {
 }
 
 outdoorBtn.addEventListener('click', goOutside);
-
