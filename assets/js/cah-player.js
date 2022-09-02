@@ -75,6 +75,11 @@ function hidecards (event){
     var allCards = document.querySelectorAll('.wcard')
     for ( var i = 0; i < allCards.length; i++) {
         allCards[i].classList.toggle('toggled');
+        // targeting the grandchild element to change text color
+        var child = allCards[i].children[0];
+        var grandChild = child.children[0];
+        var greatgChild = grandChild.children[0];
+        greatgChild.style.color = 'black';
     }
     choosenCard.style.background = 'white';
     var xIcon = document.createElement('i');
