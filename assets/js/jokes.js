@@ -8,7 +8,6 @@ var jokeRatingContainer = document.querySelector('#joke-ratings');
 jokeFormEl.addEventListener("submit", function(event) {
     event.preventDefault();
     var jokeType = inputEl.value;
-    console.log(jokeType);
     if(jokeType === "manatee") {
         getManJoke();
     }
@@ -37,9 +36,6 @@ function getProgrammingJoke() {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
-                    console.log(data.setup);
-                    console.log(data.delivery);
                     var setup = data.setup;
                     var delivery = data.delivery;
                     displayJoke(setup, delivery);
@@ -64,9 +60,6 @@ function getManJoke() {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
-                    console.log(data.setup);
-                    console.log(data.punchline);
                     var setup = data.setup;
                     var delivery = data.punchline;
                     displayJoke(setup, delivery);
@@ -91,10 +84,7 @@ function getDadJoke() {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
-                    var randomNumber = Math.floor(Math.random() * data.items.length);
-                    console.log(data.items[randomNumber].headline); 
-                    console.log(data.items[randomNumber].punchline); 
+                    var randomNumber = Math.floor(Math.random() * data.items.length); 
                     var setup = data.items[randomNumber].headline;
                     var delivery = data.items[randomNumber].punchline;
                     displayJoke(setup, delivery);
@@ -141,7 +131,6 @@ function displayJoke(setup, delivery) {
 
 //saves liked jokes to local storage
 function saveJoke(setup, delivery) {
-   console.log('hi')
     let currentJoke = [ {
         Que: setup ,
         Aye: delivery

@@ -22,7 +22,6 @@ function getBlackCard() {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
                     var cardText = data.text;
                     displayCard(cardText);
                 })
@@ -41,7 +40,6 @@ pickCardBtn.addEventListener("click", getBlackCard);
 
 //redirects to CAH home page when game is over 
 function newGame(event) {
-    console.log('hi')
     event.preventDefault();
     
     location.assign('./cah.html');

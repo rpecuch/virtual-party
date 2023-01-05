@@ -7,23 +7,16 @@ var weatherContentEl = document.querySelector("#weather-container");
 function getCoords(event) {
     event.preventDefault();
     var cityQuery = inputEl.value;
-    console.log(cityQuery);
     var coordsUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityQuery + "&appid=69f30a43ab68091abf44ef0a8bf5b7d9&units=imperial"
     fetch(coordsUrl)
         .then(function(response) {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
-                    console.log(data.weather[0].description);
                     var description = data.weather[0].description;
-                    console.log(data.main.temp);
                     var temp = data.main.temp;
-                    console.log(data.weather[0].icon);
                     var icon = data.weather[0].icon;
-                    console.log(data.main.humidity);
                     var humid = data.main.humidity;
-                    console.log(data.wind.speed);
                     var wind = data.wind.speed;
                     displayWeather(cityQuery,description, temp, icon, humid, wind);
                 })

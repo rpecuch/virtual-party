@@ -16,7 +16,6 @@ backBtn.addEventListener('click', goHome);
 //redirects to CAH home page
 function newGame(event) {
     event.preventDefault();
-    console.log("hi");
     location.assign('./cah.html');
 }
 

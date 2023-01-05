@@ -19,7 +19,6 @@ function getWCard () {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    console.log(data);
                     var wyrCard = data[0].question;
                     displayCard(wyrCard);
                 })
@@ -31,7 +30,6 @@ pickCard.addEventListener("click", getWCard);
 
 //displays WYR card 
 function displayCard(wyrCard) {
-    console.log("display");
     var cardContainer = document.createElement("div");
     cardContainer.classList.add("card", "my-3", "p-3");
     var cardText = document.createElement("p");
