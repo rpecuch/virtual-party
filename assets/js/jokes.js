@@ -78,26 +78,20 @@ function getManJoke() {
 const dadOptions = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'dc01982f18mshe1b5fc27f0861e1p15f2dfjsnfb839f6c1e1f',
-		'X-RapidAPI-Host': 'papajoke.p.rapidapi.com'
+        'Accept': 'application/json'
 	}
 };
 
 //retrieves random joke from dad jokes API
 function getDadJoke() {
-    var dadJokeUrl = 'https://papajoke.p.rapidapi.com/api/jokes';
+    var dadJokeUrl = 'https://icanhazdadjoke.com/';
     fetch(dadJokeUrl, dadOptions)
         .then(function(response) {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
                     console.log(data);
-                    var randomNumber = Math.floor(Math.random() * data.items.length);
-                    console.log(data.items[randomNumber].headline); 
-                    console.log(data.items[randomNumber].punchline); 
-                    var setup = data.items[randomNumber].headline;
-                    var delivery = data.items[randomNumber].punchline;
-                    displayJoke(setup, delivery);
+                    displayJoke(data.joke);
                 })
             }
         })
@@ -106,13 +100,11 @@ function getDadJoke() {
 var backBtn = document.querySelector('#home-btn');
 
 //displays joke that was retrieved from API
-function displayJoke(setup, delivery) {
+function displayJoke(delivery) {
     var jokeContainer = document.createElement("div");
     jokeContainer.classList.add("card", "my-3", "p-3");
     var jokeBody = document.createElement("div");
     jokeContainer.append(jokeBody);
-    var setupEl = document.createElement("p");
-    setupEl.textContent = setup;
     var deliveryEl = document.createElement("p");
     deliveryEl.textContent = delivery;
     //adds a like and dislike button to each card 
@@ -126,7 +118,7 @@ function displayJoke(setup, delivery) {
     var dislikeIcon = document.createElement("i");
     dislikeIcon.classList.add("fa-solid", "fa-thumbs-down", "fa-2xl")
     dislikeButton.append(dislikeIcon);
-    jokeBody.append(setupEl, deliveryEl, likeButton, dislikeButton);
+    jokeBody.append(deliveryEl, likeButton, dislikeButton);
     jokeContentEl.append(jokeContainer);
     //when user clicks dislike button
     dislikeIcon.addEventListener("click", function() {
