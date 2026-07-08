@@ -65,8 +65,6 @@ function getManJoke() {
                 response.json()
                 .then(function(data) {
                     console.log(data);
-                    console.log(data.setup);
-                    console.log(data.punchline);
                     var setup = data.setup;
                     var delivery = data.punchline;
                     displayJoke(setup, delivery);
@@ -100,11 +98,14 @@ function getDadJoke() {
 var backBtn = document.querySelector('#home-btn');
 
 //displays joke that was retrieved from API
-function displayJoke(delivery) {
+function displayJoke(setup, delivery) {
     var jokeContainer = document.createElement("div");
     jokeContainer.classList.add("card", "my-3", "p-3");
     var jokeBody = document.createElement("div");
     jokeContainer.append(jokeBody);
+    
+    var setupEl = document.createElement("p");
+    setupEl.textContent = setup;
     var deliveryEl = document.createElement("p");
     deliveryEl.textContent = delivery;
     //adds a like and dislike button to each card 
@@ -118,7 +119,7 @@ function displayJoke(delivery) {
     var dislikeIcon = document.createElement("i");
     dislikeIcon.classList.add("fa-solid", "fa-thumbs-down", "fa-2xl")
     dislikeButton.append(dislikeIcon);
-    jokeBody.append(deliveryEl, likeButton, dislikeButton);
+    jokeBody.append(setupEl, deliveryEl, likeButton, dislikeButton);
     jokeContentEl.append(jokeContainer);
     //when user clicks dislike button
     dislikeIcon.addEventListener("click", function() {

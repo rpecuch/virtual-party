@@ -110,7 +110,7 @@ main {
 /* ---------------------------------------------------------- */
 /* <=== - WEATHER DASHBOARD - ===> */
 /* - search bar - */
-#city-input {
+[id*="-weather-input"] {
     display: flex;
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
