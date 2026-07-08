@@ -23,27 +23,24 @@ function newGame(event) {
 newGameBtn.addEventListener('click', newGame);
 
 const WhiteCardOp = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'dc01982f18mshe1b5fc27f0861e1p15f2dfjsnfb839f6c1e1f',
-		'X-RapidAPI-Host': 'cards-against-humanity.p.rapidapi.com'
-	}
+	method: 'GET'
 };
 
 //collects randomly selected set of white cards (player cards) from CAH API
 function getWhiteCard() {
-    var whiteCardUrl = 'https://cards-against-humanity.p.rapidapi.com/white/5';
+    var whiteCardUrl = 'https://cards-against-humanity-api.herokuapp.com/api/sets/0';
     fetch(whiteCardUrl,WhiteCardOp )
         .then(function(response) {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
-                    var card1= data[0].text;
-                    var card2= data[1].text;
-                    var card3= data[2].text;
-                    var card4= data[3].text;
-                    var card5= data[4].text;
-                    displayCard(card1, card2, card3, card4, card5);
+                    console.log(data)
+                    // var card1= data.white[0];
+                    // var card2= data.white[1];
+                    // var card3= data.white[2];
+                    // var card4= data.white[3];
+                    // var card5= data.white[4];
+                    // displayCard(card1, card2, card3, card4, card5);
                 })
             }
         })
