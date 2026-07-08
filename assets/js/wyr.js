@@ -13,15 +13,16 @@ const wROp = {
 //retrieves random WYR card from API
 function getWCard () {
     cardContentEl.innerHTML = "";
-    var wCardUrl = 'https://would-you-rather.p.rapidapi.com/wyr/random';
-    fetch(wCardUrl,wROp )
+    var wCardUrl = 'https://opentdb.com/api.php?amount=1';
+    fetch(wCardUrl )
         .then(function(response) {
             if(response.ok) {
                 response.json()
                 .then(function(data) {
                     console.log(data);
-                    var wyrCard = data[0].question;
-                    displayCard(wyrCard);
+                    var wyrCard = data.results[0].question;
+                    var wyrAnswer = data.results[0].correct_answer;
+                    displayCard(wyrCard, wyrAnswer);
                 })
             }
         })
@@ -30,13 +31,16 @@ function getWCard () {
 pickCard.addEventListener("click", getWCard);
 
 //displays WYR card 
-function displayCard(wyrCard) {
+function displayCard(wyrCard, wyrAnswer) {
     console.log("display");
     var cardContainer = document.createElement("div");
     cardContainer.classList.add("card", "my-3", "p-3");
     var cardText = document.createElement("p");
+    var answerText = document.createElement("p");
     cardText.textContent = wyrCard;
+    answerText.textContent = wyrAnswer;
     cardContainer.appendChild(cardText);
+    cardContainer.appendChild(answerText);
     cardContentEl.appendChild(cardContainer);
 }
 
